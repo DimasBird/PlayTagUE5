@@ -78,8 +78,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 //// Здесь текст о проекте
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -103,8 +101,6 @@
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 /// Описываю шаги установки
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -119,9 +115,6 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,8 +135,3 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 /// Здесь укажу необходимые ресурсы для понимания
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
