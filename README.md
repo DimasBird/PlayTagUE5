@@ -34,7 +34,7 @@
   <p align="center">
     The UE5 character C++ project.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/oDimasBird/PlayTagUE5"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/DimasBird/PlayTagUE5">View Demo</a>
