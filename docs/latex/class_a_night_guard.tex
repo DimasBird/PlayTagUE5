@@ -1,0 +1,910 @@
+\doxysection{ANight\+Guard Class Reference}
+\hypertarget{class_a_night_guard}{}\label{class_a_night_guard}\index{ANightGuard@{ANightGuard}}
+
+
+\doxylink{class_a_night_guard}{ANight\+Guard} class.  
+
+
+
+
+{\ttfamily \#include $<$Night\+Guard.\+h$>$}
+
+Inheritance diagram for ANight\+Guard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_night_guard}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_night_guard_a7aa5f6aa277be4732b149c5d28406332}{ANight\+Guard}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_ab5279ad503fcdc588375fb28b299e1d8}{Setup\+Player\+Input\+Component}} (class UInput\+Component \texorpdfstring{$\ast$}{*}My\+Player\+Input) override
+\begin{DoxyCompactList}\small\item\em Sets the inputs for actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a02cee2b0cd30f20394addb6c609c65bb}{Move\+Forward\+Backward}} (float Value)
+\begin{DoxyCompactList}\small\item\em Makes character run forward and backward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_ada223fe733813839613dd180f040fa9c}{Move\+Left\+Right}} (float Value)
+\begin{DoxyCompactList}\small\item\em Makes character run left and right. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_abaada86c3663e3d99bff8d56a56c56d9}{Crouch\+Func}} () override
+\begin{DoxyCompactList}\small\item\em Makes character crouch/uncrouch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_afdcf6efd26e81d17bd8da1fee0b80b95}{Server\+\_\+\+Set\+Is\+Run}} (bool b\+New\+Is\+Run)
+\begin{DoxyCompactList}\small\item\em Sets Is\+Run on the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a16905f4c170e279d93e304b23be63002}{Client\+\_\+\+Set\+Is\+Run}} (bool b\+New\+Is\+Run)
+\begin{DoxyCompactList}\small\item\em Sets Is\+Run on a client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a990feb323bf8043c49011488b452bb32}{Server\+\_\+\+Set\+Is\+Tired}} (bool b\+New\+Is\+Tired)
+\begin{DoxyCompactList}\small\item\em Sets Is\+Tired on the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a6b2515903a6ae4eca94de79be8a55b8c}{Client\+\_\+\+Set\+Is\+Tired}} (bool b\+New\+Is\+Tired)
+\begin{DoxyCompactList}\small\item\em Sets Is\+Tired on a client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_afec7091629b2dddca0905250cb897c3e}{Server\+\_\+\+Set\+Current\+Stamina}} (float f\+New\+Current\+Stamina)
+\begin{DoxyCompactList}\small\item\em Sets Current\+Stamina on the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a9be2522150e4604ceb24556acae4f856}{Client\+\_\+\+Set\+Current\+Stamina}} (float f\+New\+Current\+Stamina)
+\begin{DoxyCompactList}\small\item\em Sets Current\+Stamina on a client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a81bf746044c7a2a33f712555a9fec003}{Run}} () override
+\begin{DoxyCompactList}\small\item\em Run method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a6839799cb424bee3a2df8ef03658432a}{Stop\+Run}} () override
+\begin{DoxyCompactList}\small\item\em Stop\+Run method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a9ef50615f2a6d9e33510c1eb50655461}{Stop\+Run\+Self}} () override
+\begin{DoxyCompactList}\small\item\em Stop\+Run\+Self method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a5b890e72d01e7b25e156dad58e66b84e}{Decrease\+Stamina}} () override
+\begin{DoxyCompactList}\small\item\em Decrease\+Stamina method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a7e9bcdbd8d79b1941fcbe26cac1c9d3a}{Increase\+Stamina}} () override
+\begin{DoxyCompactList}\small\item\em Increase\+Stamina method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_aa8487a01d9428112c25fa4303df6e2cb}{Interact}} () override
+\begin{DoxyCompactList}\small\item\em Interact method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_ae7388b4c115adffc52b37112294c68b9}{Change\+Flashlight}} () override
+\begin{DoxyCompactList}\small\item\em Change\+Flashlight method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_aaa1eb234a03e2d2f2872488860773046}{Change\+Camera}} () override
+\begin{DoxyCompactList}\small\item\em Change\+Camera method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a67a53089174b7c1c6b7c53cf780e8a38}{Tick}} (float Time) override
+\begin{DoxyCompactList}\small\item\em Overriden Unreal Engine Tick method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_a1097dcdc68b0165b3f59652a5e78df86}{Get\+Lifetime\+Replicated\+Props}} (TArray$<$ FLifetime\+Property $>$ \&Out\+Lifetime\+Props) const override
+\begin{DoxyCompactList}\small\item\em Sets replication conditions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_night_guard_aa5a3b4beb84c9ad7b69e854ba0f5b2cf}{Update\+\_\+\+Movement\+\_\+\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Update\+\_\+\+Movement\+\_\+\+Speed method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_my_character}{AMy\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_my_character_acf50f0ca5a617c44a2af5fc709d5ae43}{AMy\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a character. \end{DoxyCompactList}\item 
+const float \& \mbox{\hyperlink{class_a_my_character_aca5cb3baf5ef2265ff411388137878dc}{Get\+Stamina}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Current\+Stamina. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_character_afb05292eec90e55888fedbab337930f7}{Get\+Lifetime\+Replicated\+Props}} (TArray$<$ FLifetime\+Property $>$ \&Out\+Lifetime\+Props) const
+\begin{DoxyCompactList}\small\item\em The replication method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_night_guard_a9da71dd26103770d16a95f6f2ea77430}{Spring\+Arm\+Length}} = 300.\+0f
+\begin{DoxyCompactList}\small\item\em The parameter of the Spring Arms. \end{DoxyCompactList}\item 
+USpring\+Arm\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_aaaa5e901b84797393ffed2887c99e2eb}{Spring\+Arm1}}
+\begin{DoxyCompactList}\small\item\em The pointer to Spring Arm 1. \end{DoxyCompactList}\item 
+USpring\+Arm\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a21f2506ec82d682b644126f2adf96445}{Spring\+Arm2}}
+\begin{DoxyCompactList}\small\item\em The pointer to Spring Arm 2. \end{DoxyCompactList}\item 
+UCamera\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a604d51094d5471bda0df3f9c65bf0a1e}{Camera3rd\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em The pointer to 3rd person Camera 1. \end{DoxyCompactList}\item 
+UCamera\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a4953c66dfa73588359e72e7e163afcf9}{Camera3rd\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em The pointer to 3rd person Camera 2. \end{DoxyCompactList}\item 
+UCamera\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_ab80582c99372b29069b301a2d8d61408}{Camera1st}}
+\begin{DoxyCompactList}\small\item\em The pointer to 1st person Camera. \end{DoxyCompactList}\item 
+URect\+Light\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a815a79f6a3a0305d40361759f8b566ff}{Light}}
+\begin{DoxyCompactList}\small\item\em The pointer to the flashlight Rect Light. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_night_guard_a8932aaee72bbf7e1d397139c47ce7740}{Flashlight\+Brightness}} = 1000.\+0f
+\begin{DoxyCompactList}\small\item\em The value of flashlight\textquotesingle{}s brightness. \end{DoxyCompactList}\item 
+UAudio\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_aa86f5861c2ba783535a9e4a9e3b95424}{Flashlight\+Sound1}}
+\begin{DoxyCompactList}\small\item\em The pointer to flashlight\textquotesingle{}s sound 1. \end{DoxyCompactList}\item 
+UAudio\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a4dcac4421687b9c2f56e594536566920}{Flashlight\+Sound2}}
+\begin{DoxyCompactList}\small\item\em The pointer to flashlight\textquotesingle{}s sound 2. \end{DoxyCompactList}\item 
+UMaterial\+Interface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a8913102c8c2642db46c0344c680001ea}{Material1}}
+\begin{DoxyCompactList}\small\item\em The pointer to the flashlight\textquotesingle{}s light material 1. \end{DoxyCompactList}\item 
+UMaterial\+Interface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_night_guard_a2525ed13b706eb8badadb807c58f4d39}{Material2}}
+\begin{DoxyCompactList}\small\item\em The pointer to the flashlight\textquotesingle{}s light material 2. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_night_guard_a33e520e3f8bf6f3ad945d6b9fac0e8c1}{Line\+Trace\+Length}} = 300
+\begin{DoxyCompactList}\small\item\em The length of the Line Trace, which appears with the Interaction(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_a_my_character}{AMy\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_my_character_a49edd4f9c433a5b163924daad958aa75}{Capsule\+Half\+Height}} = 100.\+0f
+\begin{DoxyCompactList}\small\item\em The capsule\textquotesingle{}s half height. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_character_a49dafe9c5af06eaec290d56c7e43b8d2}{Capsule\+Radius}} = 37.\+5f
+\begin{DoxyCompactList}\small\item\em The capsule\textquotesingle{}s radius. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_my_character_a5118dec3d490298d0ef0fe6aee6d72a6}{Camera\+Type}} = 0
+\begin{DoxyCompactList}\small\item\em The value, which is used to set player\textquotesingle{}s POV. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_my_character_a183731e025191e2d73c19a5df6fc978c}{Flashlight\+On}} = false
+\begin{DoxyCompactList}\small\item\em The value, which is used to set current flashlight\textquotesingle{}s state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_my_character_a231b8e62526570dddc541129b23d344a}{Is\+Run}} = false
+\begin{DoxyCompactList}\small\item\em The value, which is used to set if the character is running. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_my_character_ad87f46582f7e5c4f3b777ddabe61e4ee}{Is\+Tired}} = false
+\begin{DoxyCompactList}\small\item\em The value, which is used to set if the character is tired. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_my_character_ac2ff917033a63d45fd19e2dbe81056bc}{Posture}} = 1
+\begin{DoxyCompactList}\small\item\em The value, which is used to set current posture. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_character_a58f48598fc74625e78cd30bd69478bc7}{Stamina}} = 300.\+0f
+\begin{DoxyCompactList}\small\item\em The max Stamina parameter. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_character_a28be452268b28fd6152cf31368694ae1}{Minus\+Stamina}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The value the current stamina decreases by. Better not change. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_character_a8da5e6e74e90d0fc8705bfce2be17bb9}{Plus\+Stamina}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The value the current stamina increases by. Better not change. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_character_a3a91a74c612be52d0320c7ad71cf0943}{Current\+Stamina}} = \mbox{\hyperlink{class_a_my_character_a58f48598fc74625e78cd30bd69478bc7}{Stamina}}
+\begin{DoxyCompactList}\small\item\em Character\textquotesingle{}s current stamina. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_character_aa2537b7930d5bac47bc746a8b9a58bd8}{Recovery\+Stamina}} = 0.\+5 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_my_character_a58f48598fc74625e78cd30bd69478bc7}{Stamina}}
+\begin{DoxyCompactList}\small\item\em The recovery condition value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_a_night_guard}{ANight\+Guard} class. 
+
+The class of a playable character. 
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00025}{25}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_night_guard_a7aa5f6aa277be4732b149c5d28406332}\index{ANightGuard@{ANightGuard}!ANightGuard@{ANightGuard}}
+\index{ANightGuard@{ANightGuard}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{ANightGuard()}{ANightGuard()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a7aa5f6aa277be4732b149c5d28406332} 
+ANight\+Guard\+::\+ANight\+Guard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for a character. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_night_guard_aaa1eb234a03e2d2f2872488860773046}\index{ANightGuard@{ANightGuard}!ChangeCamera@{ChangeCamera}}
+\index{ChangeCamera@{ChangeCamera}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{ChangeCamera()}{ChangeCamera()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_aaa1eb234a03e2d2f2872488860773046} 
+void ANight\+Guard\+::\+Change\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Change\+Camera method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+April, 2024
+\end{DoxyDate}
+This method is used to change character\textquotesingle{}s POV. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a89ef1692f74b49306767edf4180cae43}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00170}{170}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_ae7388b4c115adffc52b37112294c68b9}\index{ANightGuard@{ANightGuard}!ChangeFlashlight@{ChangeFlashlight}}
+\index{ChangeFlashlight@{ChangeFlashlight}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{ChangeFlashlight()}{ChangeFlashlight()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_ae7388b4c115adffc52b37112294c68b9} 
+void ANight\+Guard\+::\+Change\+Flashlight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Change\+Flashlight method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+April, 2024
+\end{DoxyDate}
+This method is used to change flashlight\textquotesingle{}s light. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a2eb5ec204357aa495f29387e070d4910}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a9be2522150e4604ceb24556acae4f856}\index{ANightGuard@{ANightGuard}!Client\_SetCurrentStamina@{Client\_SetCurrentStamina}}
+\index{Client\_SetCurrentStamina@{Client\_SetCurrentStamina}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Client\_SetCurrentStamina()}{Client\_SetCurrentStamina()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a9be2522150e4604ceb24556acae4f856} 
+void ANight\+Guard\+::\+Client\+\_\+\+Set\+Current\+Stamina (\begin{DoxyParamCaption}\item[{float}]{f\+New\+Current\+Stamina}{}\end{DoxyParamCaption})}
+
+
+
+Sets Current\+Stamina on a client. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This is a server method to set Current\+Stamina on a client. It is defined by Unreal Engine. The only thing should be made is giving definitions to \+\_\+\+Implemntation and \+\_\+\+Validate methods. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+New\+Is\+Run} & The new value of the Current\+Stamina variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_night_guard_a16905f4c170e279d93e304b23be63002}\index{ANightGuard@{ANightGuard}!Client\_SetIsRun@{Client\_SetIsRun}}
+\index{Client\_SetIsRun@{Client\_SetIsRun}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Client\_SetIsRun()}{Client\_SetIsRun()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a16905f4c170e279d93e304b23be63002} 
+void ANight\+Guard\+::\+Client\+\_\+\+Set\+Is\+Run (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+Is\+Run}{}\end{DoxyParamCaption})}
+
+
+
+Sets Is\+Run on a client. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This is a client method to make a character run on a client. It is defined by Unreal Engine. The only thing should be made is giving definitions to \+\_\+\+Implemntation and \+\_\+\+Validate methods. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+New\+Is\+Run} & The new state of the Is\+Run variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_night_guard_a6b2515903a6ae4eca94de79be8a55b8c}\index{ANightGuard@{ANightGuard}!Client\_SetIsTired@{Client\_SetIsTired}}
+\index{Client\_SetIsTired@{Client\_SetIsTired}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Client\_SetIsTired()}{Client\_SetIsTired()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a6b2515903a6ae4eca94de79be8a55b8c} 
+void ANight\+Guard\+::\+Client\+\_\+\+Set\+Is\+Tired (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+Is\+Tired}{}\end{DoxyParamCaption})}
+
+
+
+Sets Is\+Tired on a client. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This is a client method to make a character be tired on a client. It is defined by Unreal Engine. The only thing should be made is giving definitions to \+\_\+\+Implemntation and \+\_\+\+Validate methods. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+New\+Is\+Run} & The new state of the Is\+Tired variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_night_guard_abaada86c3663e3d99bff8d56a56c56d9}\index{ANightGuard@{ANightGuard}!CrouchFunc@{CrouchFunc}}
+\index{CrouchFunc@{CrouchFunc}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{CrouchFunc()}{CrouchFunc()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_abaada86c3663e3d99bff8d56a56c56d9} 
+void ANight\+Guard\+::\+Crouch\+Func (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Makes character crouch/uncrouch. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+April, 2024
+\end{DoxyDate}
+This makes character crouch or uncrouch with functions of an AActor. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_afa4d4cdc45c33537fe1ebb640ddf10ea}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a5b890e72d01e7b25e156dad58e66b84e}\index{ANightGuard@{ANightGuard}!DecreaseStamina@{DecreaseStamina}}
+\index{DecreaseStamina@{DecreaseStamina}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{DecreaseStamina()}{DecreaseStamina()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a5b890e72d01e7b25e156dad58e66b84e} 
+void ANight\+Guard\+::\+Decrease\+Stamina (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Decrease\+Stamina method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+January, 2024
+\end{DoxyDate}
+This method is used to decrease Current\+Stamina by 1.\+0f. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a9d7b44418b624e5e89be749018321a25}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a1097dcdc68b0165b3f59652a5e78df86}\index{ANightGuard@{ANightGuard}!GetLifetimeReplicatedProps@{GetLifetimeReplicatedProps}}
+\index{GetLifetimeReplicatedProps@{GetLifetimeReplicatedProps}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{GetLifetimeReplicatedProps()}{GetLifetimeReplicatedProps()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a1097dcdc68b0165b3f59652a5e78df86} 
+void ANight\+Guard\+::\+Get\+Lifetime\+Replicated\+Props (\begin{DoxyParamCaption}\item[{TArray$<$ FLifetime\+Property $>$ \&}]{Out\+Lifetime\+Props}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Sets replication conditions. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This method sets the conditions for replicated variables. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em Out\+Lifetime\+Props} & An array which is set inside this method with replication rules. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a7e9bcdbd8d79b1941fcbe26cac1c9d3a}\index{ANightGuard@{ANightGuard}!IncreaseStamina@{IncreaseStamina}}
+\index{IncreaseStamina@{IncreaseStamina}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{IncreaseStamina()}{IncreaseStamina()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a7e9bcdbd8d79b1941fcbe26cac1c9d3a} 
+void ANight\+Guard\+::\+Increase\+Stamina (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Increase\+Stamina method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+January, 2024
+\end{DoxyDate}
+This method is used to increase Current\+Stamina by 1.\+0f. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a702a3e5120210a6494fccd5f628cc86a}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_aa8487a01d9428112c25fa4303df6e2cb}\index{ANightGuard@{ANightGuard}!Interact@{Interact}}
+\index{Interact@{Interact}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_aa8487a01d9428112c25fa4303df6e2cb} 
+void ANight\+Guard\+::\+Interact (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Interact method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+April, 2024
+\end{DoxyDate}
+This method is used to cast the action from \doxylink{class_a_night_guard}{ANight\+Guard} to the interactable object (in this case this is the \doxylink{class_a_classic_door}{AClassic\+Door}). Start\+Location -\/ The begin of the Line\+Trace.
+
+End\+Location -\/ The end of the Line\+Trace.
+
+Hit\+Result -\/ The pointer to what we hit with the Line\+Trace.
+
+Collision\+Params -\/ The params of collision.
+
+Interactable\+Object -\/ The cast of the door we hit with Line\+Trace.
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a8c3292552cae1ab3e46b9b5c45d5f638}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a02cee2b0cd30f20394addb6c609c65bb}\index{ANightGuard@{ANightGuard}!MoveForwardBackward@{MoveForwardBackward}}
+\index{MoveForwardBackward@{MoveForwardBackward}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{MoveForwardBackward()}{MoveForwardBackward()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a02cee2b0cd30f20394addb6c609c65bb} 
+void ANight\+Guard\+::\+Move\+Forward\+Backward (\begin{DoxyParamCaption}\item[{float}]{Value}{}\end{DoxyParamCaption})}
+
+
+
+Makes character run forward and backward. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+January, 2024
+\end{DoxyDate}
+This is used to make character go the direction as it says. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Value} & The value of the Forward\+Backward Axis. \\
+\hline
+\end{DoxyParams}
+Rotation -\/ This gets character\textquotesingle{}s current rotation.
+
+Yaw -\/ This gets character\textquotesingle{}s Yaw rotation.
+
+Direction -\/ This defines character to move on X-\/axis.
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_ada223fe733813839613dd180f040fa9c}\index{ANightGuard@{ANightGuard}!MoveLeftRight@{MoveLeftRight}}
+\index{MoveLeftRight@{MoveLeftRight}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{MoveLeftRight()}{MoveLeftRight()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_ada223fe733813839613dd180f040fa9c} 
+void ANight\+Guard\+::\+Move\+Left\+Right (\begin{DoxyParamCaption}\item[{float}]{Value}{}\end{DoxyParamCaption})}
+
+
+
+Makes character run left and right. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+January, 2024
+\end{DoxyDate}
+This is used to make charater go sideways. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Value} & The value of the Left\+Right Axis. \\
+\hline
+\end{DoxyParams}
+Rotation -\/ This gets character\textquotesingle{}s current rotation.
+
+Yaw -\/ This gets character\textquotesingle{}s Yaw rotation.
+
+Direction -\/ This defines character to move on X-\/axis.
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a81bf746044c7a2a33f712555a9fec003}\index{ANightGuard@{ANightGuard}!Run@{Run}}
+\index{Run@{Run}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a81bf746044c7a2a33f712555a9fec003} 
+void ANight\+Guard\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Run method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This method is used to set the logic of character movement. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a1c160b696cd67c562d883dd1292a1456}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_afec7091629b2dddca0905250cb897c3e}\index{ANightGuard@{ANightGuard}!Server\_SetCurrentStamina@{Server\_SetCurrentStamina}}
+\index{Server\_SetCurrentStamina@{Server\_SetCurrentStamina}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Server\_SetCurrentStamina()}{Server\_SetCurrentStamina()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_afec7091629b2dddca0905250cb897c3e} 
+void ANight\+Guard\+::\+Server\+\_\+\+Set\+Current\+Stamina (\begin{DoxyParamCaption}\item[{float}]{f\+New\+Current\+Stamina}{}\end{DoxyParamCaption})}
+
+
+
+Sets Current\+Stamina on the server. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This is a server method to set Current\+Stamina on the server. It is defined by Unreal Engine. The only thing should be made is giving definitions to \+\_\+\+Implemntation and \+\_\+\+Validate methods. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+New\+Is\+Run} & The new value of the Current\+Stamina variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_night_guard_afdcf6efd26e81d17bd8da1fee0b80b95}\index{ANightGuard@{ANightGuard}!Server\_SetIsRun@{Server\_SetIsRun}}
+\index{Server\_SetIsRun@{Server\_SetIsRun}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Server\_SetIsRun()}{Server\_SetIsRun()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_afdcf6efd26e81d17bd8da1fee0b80b95} 
+void ANight\+Guard\+::\+Server\+\_\+\+Set\+Is\+Run (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+Is\+Run}{}\end{DoxyParamCaption})}
+
+
+
+Sets Is\+Run on the server. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This is a server method to make a character run on the server. It is defined by Unreal Engine. The only thing should be made is giving definitions to \+\_\+\+Implemntation and \+\_\+\+Validate methods. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+New\+Is\+Run} & The new state of the Is\+Run variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_night_guard_a990feb323bf8043c49011488b452bb32}\index{ANightGuard@{ANightGuard}!Server\_SetIsTired@{Server\_SetIsTired}}
+\index{Server\_SetIsTired@{Server\_SetIsTired}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Server\_SetIsTired()}{Server\_SetIsTired()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a990feb323bf8043c49011488b452bb32} 
+void ANight\+Guard\+::\+Server\+\_\+\+Set\+Is\+Tired (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+Is\+Tired}{}\end{DoxyParamCaption})}
+
+
+
+Sets Is\+Tired on the server. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This is a server method to make a character be tired on the server. It is defined by Unreal Engine. The only thing should be made is giving definitions to \+\_\+\+Implemntation and \+\_\+\+Validate methods. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b\+New\+Is\+Run} & The new state of the Is\+Tired variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_night_guard_ab5279ad503fcdc588375fb28b299e1d8}\index{ANightGuard@{ANightGuard}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
+\index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{SetupPlayerInputComponent()}{SetupPlayerInputComponent()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_ab5279ad503fcdc588375fb28b299e1d8} 
+void ANight\+Guard\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class UInput\+Component \texorpdfstring{$\ast$}{*}}]{My\+Player\+Input}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Sets the inputs for actions. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+January, 2024
+\end{DoxyDate}
+It is used to set the function to run after the key being pressed. 
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a6839799cb424bee3a2df8ef03658432a}\index{ANightGuard@{ANightGuard}!StopRun@{StopRun}}
+\index{StopRun@{StopRun}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{StopRun()}{StopRun()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a6839799cb424bee3a2df8ef03658432a} 
+void ANight\+Guard\+::\+Stop\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop\+Run method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This method is used to stop character from running permanently. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_a36ae65757862991acb5325b6315e50ba}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a9ef50615f2a6d9e33510c1eb50655461}\index{ANightGuard@{ANightGuard}!StopRunSelf@{StopRunSelf}}
+\index{StopRunSelf@{StopRunSelf}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{StopRunSelf()}{StopRunSelf()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a9ef50615f2a6d9e33510c1eb50655461} 
+void ANight\+Guard\+::\+Stop\+Run\+Self (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop\+Run\+Self method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This method is used to stop the character from running whenever the player wants. 
+
+Reimplemented from \mbox{\hyperlink{class_a_my_character_ab7db134078c2c8328fb345bf4c24b29a}{AMy\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_a67a53089174b7c1c6b7c53cf780e8a38}\index{ANightGuard@{ANightGuard}!Tick@{Tick}}
+\index{Tick@{Tick}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a67a53089174b7c1c6b7c53cf780e8a38} 
+void ANight\+Guard\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Overriden Unreal Engine Tick method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This method calls functions every game tick. It is used for Stamina functionality. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Time} & The time to work in a cycle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00197}{197}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+\Hypertarget{class_a_night_guard_aa5a3b4beb84c9ad7b69e854ba0f5b2cf}\index{ANightGuard@{ANightGuard}!Update\_Movement\_Speed@{Update\_Movement\_Speed}}
+\index{Update\_Movement\_Speed@{Update\_Movement\_Speed}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Update\_Movement\_Speed()}{Update\_Movement\_Speed()}}
+{\footnotesize\ttfamily \label{class_a_night_guard_aa5a3b4beb84c9ad7b69e854ba0f5b2cf} 
+void ANight\+Guard\+::\+Update\+\_\+\+Movement\+\_\+\+Speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update\+\_\+\+Movement\+\_\+\+Speed method. 
+
+\begin{DoxyAuthor}{Author}
+Dimas\+Birdrus 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+May, 2024
+\end{DoxyDate}
+This method updates speed of a character. 
+
+Definition at line \mbox{\hyperlink{_night_guard_8cpp_source_l00250}{250}} of file \mbox{\hyperlink{_night_guard_8cpp_source}{Night\+Guard.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_night_guard_ab80582c99372b29069b301a2d8d61408}\index{ANightGuard@{ANightGuard}!Camera1st@{Camera1st}}
+\index{Camera1st@{Camera1st}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Camera1st}{Camera1st}}
+{\footnotesize\ttfamily \label{class_a_night_guard_ab80582c99372b29069b301a2d8d61408} 
+UCamera\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Camera1st}
+
+
+
+The pointer to 1st person Camera. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00048}{48}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a604d51094d5471bda0df3f9c65bf0a1e}\index{ANightGuard@{ANightGuard}!Camera3rd\_1@{Camera3rd\_1}}
+\index{Camera3rd\_1@{Camera3rd\_1}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Camera3rd\_1}{Camera3rd\_1}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a604d51094d5471bda0df3f9c65bf0a1e} 
+UCamera\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Camera3rd\+\_\+1}
+
+
+
+The pointer to 3rd person Camera 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00042}{42}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a4953c66dfa73588359e72e7e163afcf9}\index{ANightGuard@{ANightGuard}!Camera3rd\_2@{Camera3rd\_2}}
+\index{Camera3rd\_2@{Camera3rd\_2}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Camera3rd\_2}{Camera3rd\_2}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a4953c66dfa73588359e72e7e163afcf9} 
+UCamera\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Camera3rd\+\_\+2}
+
+
+
+The pointer to 3rd person Camera 2. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00045}{45}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a8932aaee72bbf7e1d397139c47ce7740}\index{ANightGuard@{ANightGuard}!FlashlightBrightness@{FlashlightBrightness}}
+\index{FlashlightBrightness@{FlashlightBrightness}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{FlashlightBrightness}{FlashlightBrightness}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a8932aaee72bbf7e1d397139c47ce7740} 
+float ANight\+Guard\+::\+Flashlight\+Brightness = 1000.\+0f}
+
+
+
+The value of flashlight\textquotesingle{}s brightness. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00054}{54}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_aa86f5861c2ba783535a9e4a9e3b95424}\index{ANightGuard@{ANightGuard}!FlashlightSound1@{FlashlightSound1}}
+\index{FlashlightSound1@{FlashlightSound1}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{FlashlightSound1}{FlashlightSound1}}
+{\footnotesize\ttfamily \label{class_a_night_guard_aa86f5861c2ba783535a9e4a9e3b95424} 
+UAudio\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Flashlight\+Sound1}
+
+
+
+The pointer to flashlight\textquotesingle{}s sound 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00057}{57}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a4dcac4421687b9c2f56e594536566920}\index{ANightGuard@{ANightGuard}!FlashlightSound2@{FlashlightSound2}}
+\index{FlashlightSound2@{FlashlightSound2}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{FlashlightSound2}{FlashlightSound2}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a4dcac4421687b9c2f56e594536566920} 
+UAudio\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Flashlight\+Sound2}
+
+
+
+The pointer to flashlight\textquotesingle{}s sound 2. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00059}{59}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a815a79f6a3a0305d40361759f8b566ff}\index{ANightGuard@{ANightGuard}!Light@{Light}}
+\index{Light@{Light}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Light}{Light}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a815a79f6a3a0305d40361759f8b566ff} 
+URect\+Light\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Light}
+
+
+
+The pointer to the flashlight Rect Light. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00051}{51}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a33e520e3f8bf6f3ad945d6b9fac0e8c1}\index{ANightGuard@{ANightGuard}!LineTraceLength@{LineTraceLength}}
+\index{LineTraceLength@{LineTraceLength}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{LineTraceLength}{LineTraceLength}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a33e520e3f8bf6f3ad945d6b9fac0e8c1} 
+float ANight\+Guard\+::\+Line\+Trace\+Length = 300}
+
+
+
+The length of the Line Trace, which appears with the Interaction(). 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00065}{65}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a8913102c8c2642db46c0344c680001ea}\index{ANightGuard@{ANightGuard}!Material1@{Material1}}
+\index{Material1@{Material1}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Material1}{Material1}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a8913102c8c2642db46c0344c680001ea} 
+UMaterial\+Interface\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Material1}
+
+
+
+The pointer to the flashlight\textquotesingle{}s light material 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00061}{61}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a2525ed13b706eb8badadb807c58f4d39}\index{ANightGuard@{ANightGuard}!Material2@{Material2}}
+\index{Material2@{Material2}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{Material2}{Material2}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a2525ed13b706eb8badadb807c58f4d39} 
+UMaterial\+Interface\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Material2}
+
+
+
+The pointer to the flashlight\textquotesingle{}s light material 2. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00063}{63}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_aaaa5e901b84797393ffed2887c99e2eb}\index{ANightGuard@{ANightGuard}!SpringArm1@{SpringArm1}}
+\index{SpringArm1@{SpringArm1}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{SpringArm1}{SpringArm1}}
+{\footnotesize\ttfamily \label{class_a_night_guard_aaaa5e901b84797393ffed2887c99e2eb} 
+USpring\+Arm\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Spring\+Arm1}
+
+
+
+The pointer to Spring Arm 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00036}{36}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a21f2506ec82d682b644126f2adf96445}\index{ANightGuard@{ANightGuard}!SpringArm2@{SpringArm2}}
+\index{SpringArm2@{SpringArm2}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{SpringArm2}{SpringArm2}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a21f2506ec82d682b644126f2adf96445} 
+USpring\+Arm\+Component\texorpdfstring{$\ast$}{*} ANight\+Guard\+::\+Spring\+Arm2}
+
+
+
+The pointer to Spring Arm 2. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00039}{39}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+\Hypertarget{class_a_night_guard_a9da71dd26103770d16a95f6f2ea77430}\index{ANightGuard@{ANightGuard}!SpringArmLength@{SpringArmLength}}
+\index{SpringArmLength@{SpringArmLength}!ANightGuard@{ANightGuard}}
+\doxysubsubsection{\texorpdfstring{SpringArmLength}{SpringArmLength}}
+{\footnotesize\ttfamily \label{class_a_night_guard_a9da71dd26103770d16a95f6f2ea77430} 
+float ANight\+Guard\+::\+Spring\+Arm\+Length = 300.\+0f}
+
+
+
+The parameter of the Spring Arms. 
+
+
+
+Definition at line \mbox{\hyperlink{_night_guard_8h_source_l00033}{33}} of file \mbox{\hyperlink{_night_guard_8h_source}{Night\+Guard.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/Night\+Guard.\+h\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/Night\+Guard.\+cpp\end{DoxyCompactItemize}

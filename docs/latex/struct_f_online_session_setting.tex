@@ -1,0 +1,156 @@
+\doxysection{FOnline\+Session\+Setting Struct Reference}
+\hypertarget{struct_f_online_session_setting}{}\label{struct_f_online_session_setting}\index{FOnlineSessionSetting@{FOnlineSessionSetting}}
+
+
+{\ttfamily \#include $<$Online\+Session\+Settings.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_f_online_session_setting_a4ef583fb1bcbf146fd015169b344d45f}{FOnline\+Session\+Setting}} ()
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{struct_f_online_session_setting_a2913ebd835fac564303dd4547f0a69c3}{FOnline\+Session\+Setting}} (Type \&\&In\+Data)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{struct_f_online_session_setting_a675b6f80647cbc2fcead253af708b96a}{FOnline\+Session\+Setting}} (Type \&\&In\+Data, EOnline\+Data\+Advertisement\+Type\+::\+Type In\+Advertisement\+Type)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{struct_f_online_session_setting_a7b72c77ec601684dc0eecb935678910e}{FOnline\+Session\+Setting}} (Type \&\&In\+Data, EOnline\+Data\+Advertisement\+Type\+::\+Type In\+Advertisement\+Type, int32 In\+ID)
+\item 
+bool \mbox{\hyperlink{struct_f_online_session_setting_ad460d00e78e056e6601799a81340c4b5}{operator==}} (const \mbox{\hyperlink{struct_f_online_session_setting}{FOnline\+Session\+Setting}} \&Other) const
+\item 
+bool \mbox{\hyperlink{struct_f_online_session_setting_ade29cbd5dc9febc2f6f44982ebcec0e2}{operator!=}} (const \mbox{\hyperlink{struct_f_online_session_setting}{FOnline\+Session\+Setting}} \&Other) const
+\item 
+FString \mbox{\hyperlink{struct_f_online_session_setting_a491095c6926c540f7ea7697d702000e0}{To\+String}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FVariant\+Data \mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}
+\item 
+EOnline\+Data\+Advertisement\+Type\+::\+Type \mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{Advertisement\+Type}}
+\item 
+int32 \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+One setting describing an online session contains a key, value and how this setting is advertised to others, if at all 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00016}{16}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_f_online_session_setting_a4ef583fb1bcbf146fd015169b344d45f}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{FOnlineSessionSetting()}{FOnlineSessionSetting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_a4ef583fb1bcbf146fd015169b344d45f} 
+FOnline\+Session\+Setting\+::\+FOnline\+Session\+Setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor, used when serializing a network packet 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00028}{28}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_a2913ebd835fac564303dd4547f0a69c3}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{FOnlineSessionSetting()}{FOnlineSessionSetting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_a2913ebd835fac564303dd4547f0a69c3} 
+template$<$typename Type $>$ \\
+FOnline\+Session\+Setting\+::\+FOnline\+Session\+Setting (\begin{DoxyParamCaption}\item[{Type \&\&}]{In\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for settings created/defined on the host for a session 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00036}{36}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_a675b6f80647cbc2fcead253af708b96a}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{FOnlineSessionSetting()}{FOnlineSessionSetting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_a675b6f80647cbc2fcead253af708b96a} 
+template$<$typename Type $>$ \\
+FOnline\+Session\+Setting\+::\+FOnline\+Session\+Setting (\begin{DoxyParamCaption}\item[{Type \&\&}]{In\+Data}{, }\item[{EOnline\+Data\+Advertisement\+Type\+::\+Type}]{In\+Advertisement\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for settings created/defined on the host for a session 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00045}{45}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_a7b72c77ec601684dc0eecb935678910e}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\index{FOnlineSessionSetting@{FOnlineSessionSetting}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{FOnlineSessionSetting()}{FOnlineSessionSetting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_a7b72c77ec601684dc0eecb935678910e} 
+template$<$typename Type $>$ \\
+FOnline\+Session\+Setting\+::\+FOnline\+Session\+Setting (\begin{DoxyParamCaption}\item[{Type \&\&}]{In\+Data}{, }\item[{EOnline\+Data\+Advertisement\+Type\+::\+Type}]{In\+Advertisement\+Type}{, }\item[{int32}]{In\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for settings created/defined on the host for a session 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00054}{54}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_f_online_session_setting_ade29cbd5dc9febc2f6f44982ebcec0e2}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_ade29cbd5dc9febc2f6f44982ebcec0e2} 
+bool FOnline\+Session\+Setting\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_online_session_setting}{FOnline\+Session\+Setting}} \&}]{Other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00070}{70}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_ad460d00e78e056e6601799a81340c4b5}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!operator==@{operator==}}
+\index{operator==@{operator==}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_ad460d00e78e056e6601799a81340c4b5} 
+bool FOnline\+Session\+Setting\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_online_session_setting}{FOnline\+Session\+Setting}} \&}]{Other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Comparison operator 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00064}{64}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_a491095c6926c540f7ea7697d702000e0}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!ToString@{ToString}}
+\index{ToString@{ToString}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_a491095c6926c540f7ea7697d702000e0} 
+FString FOnline\+Session\+Setting\+::\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00075}{75}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!AdvertisementType@{AdvertisementType}}
+\index{AdvertisementType@{AdvertisementType}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{AdvertisementType}{AdvertisementType}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9} 
+EOnline\+Data\+Advertisement\+Type\+::\+Type FOnline\+Session\+Setting\+::\+Advertisement\+Type}
+
+How is this session setting advertised with the backend or searches 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00022}{22}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!Data@{Data}}
+\index{Data@{Data}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d} 
+FVariant\+Data FOnline\+Session\+Setting\+::\+Data}
+
+Settings value 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00020}{20}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}\index{FOnlineSessionSetting@{FOnlineSessionSetting}!ID@{ID}}
+\index{ID@{ID}!FOnlineSessionSetting@{FOnlineSessionSetting}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \label{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8} 
+int32 FOnline\+Session\+Setting\+::\+ID}
+
+Optional ID used in some platforms as the index instead of the session name 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00024}{24}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/Online\+Session\+Settings.\+h\end{DoxyCompactItemize}
