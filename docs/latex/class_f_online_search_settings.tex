@@ -1,0 +1,135 @@
+\doxysection{FOnline\+Search\+Settings Class Reference}
+\hypertarget{class_f_online_search_settings}{}\label{class_f_online_search_settings}\index{FOnlineSearchSettings@{FOnlineSearchSettings}}
+
+
+{\ttfamily \#include $<$Online\+Session\+Settings.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_f_online_search_settings_a631ae2b3704cade4f35f724323f024f8}\label{class_f_online_search_settings_a631ae2b3704cade4f35f724323f024f8} 
+{\bfseries FOnline\+Search\+Settings} (\mbox{\hyperlink{class_f_online_search_settings}{FOnline\+Search\+Settings}} \&\&)=default
+\item 
+\Hypertarget{class_f_online_search_settings_a004e2c751808c6f5a07a9b693329f27a}\label{class_f_online_search_settings_a004e2c751808c6f5a07a9b693329f27a} 
+{\bfseries FOnline\+Search\+Settings} (const \mbox{\hyperlink{class_f_online_search_settings}{FOnline\+Search\+Settings}} \&)=default
+\item 
+\Hypertarget{class_f_online_search_settings_ad7c6c97d70d98a6f8ed7ba0da8840fd0}\label{class_f_online_search_settings_ad7c6c97d70d98a6f8ed7ba0da8840fd0} 
+\mbox{\hyperlink{class_f_online_search_settings}{FOnline\+Search\+Settings}} \& {\bfseries operator=} (\mbox{\hyperlink{class_f_online_search_settings}{FOnline\+Search\+Settings}} \&\&)=default
+\item 
+\Hypertarget{class_f_online_search_settings_a32c43e06667f6f6f93dd344be7926ed0}\label{class_f_online_search_settings_a32c43e06667f6f6f93dd344be7926ed0} 
+\mbox{\hyperlink{class_f_online_search_settings}{FOnline\+Search\+Settings}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_f_online_search_settings}{FOnline\+Search\+Settings}} \&)=default
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\void \mbox{\hyperlink{class_f_online_search_settings_ac1a5d028c344a41fc539b21e0de112b2}{Set}} (FName Key, const Value\+Type \&Value, EOnline\+Comparison\+Op\+::\+Type In\+Type, int32 ID)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\void \mbox{\hyperlink{class_f_online_search_settings_a49e216530fe6254772fd101ca232f1af}{Set}} (FName Key, const Value\+Type \&Value, EOnline\+Comparison\+Op\+::\+Type In\+Type)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\bool \mbox{\hyperlink{class_f_online_search_settings_a5a7ff4bf5ce779880091d845381f0e4f}{Get}} (FName Key, Value\+Type \&Value) const
+\item 
+EOnline\+Comparison\+Op\+::\+Type \mbox{\hyperlink{class_f_online_search_settings_adbd2586593dbb2bafa4d9ba8da31d4e2}{Get\+Comparison\+Op}} (FName Key) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FSearch\+Params \mbox{\hyperlink{class_f_online_search_settings_a7847bd07bbc669bbfcb148f3a3f7630a}{Search\+Params}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container for all parameters describing a single session search 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00163}{163}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_online_search_settings_a5a7ff4bf5ce779880091d845381f0e4f}\index{FOnlineSearchSettings@{FOnlineSearchSettings}!Get@{Get}}
+\index{Get@{Get}!FOnlineSearchSettings@{FOnlineSearchSettings}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_f_online_search_settings_a5a7ff4bf5ce779880091d845381f0e4f} 
+template$<$typename Value\+Type $>$ \\
+bool FOnline\+Search\+Settings\+::\+Get (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{Value\+Type \&}]{Value}{}\end{DoxyParamCaption}) const}
+
+Gets a key value pair combination that defines a search parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Value} & value of the setting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if found, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_f_online_search_settings_adbd2586593dbb2bafa4d9ba8da31d4e2}\index{FOnlineSearchSettings@{FOnlineSearchSettings}!GetComparisonOp@{GetComparisonOp}}
+\index{GetComparisonOp@{GetComparisonOp}!FOnlineSearchSettings@{FOnlineSearchSettings}}
+\doxysubsubsection{\texorpdfstring{GetComparisonOp()}{GetComparisonOp()}}
+{\footnotesize\ttfamily \label{class_f_online_search_settings_adbd2586593dbb2bafa4d9ba8da31d4e2} 
+EOnline\+Comparison\+Op\+::\+Type FOnline\+Search\+Settings\+::\+Get\+Comparison\+Op (\begin{DoxyParamCaption}\item[{FName}]{Key}{}\end{DoxyParamCaption}) const}
+
+Retrieve a search parameter comparison op
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key of the setting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the comparison op for the setting 
+\end{DoxyReturn}
+\Hypertarget{class_f_online_search_settings_a49e216530fe6254772fd101ca232f1af}\index{FOnlineSearchSettings@{FOnlineSearchSettings}!Set@{Set}}
+\index{Set@{Set}!FOnlineSearchSettings@{FOnlineSearchSettings}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_f_online_search_settings_a49e216530fe6254772fd101ca232f1af} 
+template$<$typename Value\+Type $>$ \\
+void FOnline\+Search\+Settings\+::\+Set (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{const Value\+Type \&}]{Value}{, }\item[{EOnline\+Comparison\+Op\+::\+Type}]{In\+Type}{}\end{DoxyParamCaption})}
+
+Sets a key value pair combination that defines a search parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Value} & value of the setting \\
+\hline
+{\em In\+Type} & type of comparison \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_online_search_settings_ac1a5d028c344a41fc539b21e0de112b2}\index{FOnlineSearchSettings@{FOnlineSearchSettings}!Set@{Set}}
+\index{Set@{Set}!FOnlineSearchSettings@{FOnlineSearchSettings}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_f_online_search_settings_ac1a5d028c344a41fc539b21e0de112b2} 
+template$<$typename Value\+Type $>$ \\
+void FOnline\+Search\+Settings\+::\+Set (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{const Value\+Type \&}]{Value}{, }\item[{EOnline\+Comparison\+Op\+::\+Type}]{In\+Type}{, }\item[{int32}]{ID}{}\end{DoxyParamCaption})}
+
+Sets a key value pair combination that defines a search parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Value} & value of the setting \\
+\hline
+{\em In\+Type} & type of comparison \\
+\hline
+{\em ID} & ID of comparison \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_f_online_search_settings_a7847bd07bbc669bbfcb148f3a3f7630a}\index{FOnlineSearchSettings@{FOnlineSearchSettings}!SearchParams@{SearchParams}}
+\index{SearchParams@{SearchParams}!FOnlineSearchSettings@{FOnlineSearchSettings}}
+\doxysubsubsection{\texorpdfstring{SearchParams}{SearchParams}}
+{\footnotesize\ttfamily \label{class_f_online_search_settings_a7847bd07bbc669bbfcb148f3a3f7630a} 
+FSearch\+Params FOnline\+Search\+Settings\+::\+Search\+Params}
+
+Array of custom search settings 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00167}{167}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/Online\+Session\+Settings.\+h\end{DoxyCompactItemize}

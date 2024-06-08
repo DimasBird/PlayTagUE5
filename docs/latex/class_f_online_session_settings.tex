@@ -1,0 +1,417 @@
+\doxysection{FOnline\+Session\+Settings Class Reference}
+\hypertarget{class_f_online_session_settings}{}\label{class_f_online_session_settings}\index{FOnlineSessionSettings@{FOnlineSessionSettings}}
+
+
+{\ttfamily \#include $<$Online\+Session\+Settings.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_f_online_session_settings_a561d4e37c06d9a432912990a237ce585}{FOnline\+Session\+Settings}} ()
+\item 
+\Hypertarget{class_f_online_session_settings_a77c0f98c1c36200d7714d9a2807edeb3}\label{class_f_online_session_settings_a77c0f98c1c36200d7714d9a2807edeb3} 
+{\bfseries FOnline\+Session\+Settings} (\mbox{\hyperlink{class_f_online_session_settings}{FOnline\+Session\+Settings}} \&\&)=default
+\item 
+\Hypertarget{class_f_online_session_settings_af77da57ca5eaff8079d82f3645287042}\label{class_f_online_session_settings_af77da57ca5eaff8079d82f3645287042} 
+{\bfseries FOnline\+Session\+Settings} (const \mbox{\hyperlink{class_f_online_session_settings}{FOnline\+Session\+Settings}} \&)=default
+\item 
+\Hypertarget{class_f_online_session_settings_a4ff528a1bd91b225f3f571147b727848}\label{class_f_online_session_settings_a4ff528a1bd91b225f3f571147b727848} 
+\mbox{\hyperlink{class_f_online_session_settings}{FOnline\+Session\+Settings}} \& {\bfseries operator=} (\mbox{\hyperlink{class_f_online_session_settings}{FOnline\+Session\+Settings}} \&\&)=default
+\item 
+\Hypertarget{class_f_online_session_settings_a4f0a7cbd17da606b5e7c109b861cde79}\label{class_f_online_session_settings_a4f0a7cbd17da606b5e7c109b861cde79} 
+\mbox{\hyperlink{class_f_online_session_settings}{FOnline\+Session\+Settings}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_f_online_session_settings}{FOnline\+Session\+Settings}} \&)=default
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\void \mbox{\hyperlink{class_f_online_session_settings_ad7cbd671743f0ed15b3e507abc87045d}{Set}} (FName Key, const Value\+Type \&Value, EOnline\+Data\+Advertisement\+Type\+::\+Type In\+Type, int32 In\+ID)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\void \mbox{\hyperlink{class_f_online_session_settings_aaa4e3ee04994688938e324832548de15}{Set}} (FName Key, const Value\+Type \&Value, EOnline\+Data\+Advertisement\+Type\+::\+Type In\+Type)
+\item 
+void \mbox{\hyperlink{class_f_online_session_settings_a31a96f80b176b0c6073901b002f67101}{Set}} (FName Key, const \mbox{\hyperlink{struct_f_online_session_setting}{FOnline\+Session\+Setting}} \&Src\+Setting)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\bool \mbox{\hyperlink{class_f_online_session_settings_a3eb136d0e3c9358e0917b0b4dc86033a}{Get}} (FName Key, Value\+Type \&Value) const
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a3b3b3b8f510ba7105716108744dcc4a3}{Remove}} (FName Key)
+\item 
+EOnline\+Data\+Advertisement\+Type\+::\+Type \mbox{\hyperlink{class_f_online_session_settings_ad8bcb8c640cefe8f54094cf950a9805d}{Get\+Advertisement\+Type}} (FName Key) const
+\item 
+int32 \mbox{\hyperlink{class_f_online_session_settings_a006b0e0b22d66ce3b0cebb5b7c4f4928}{Get\+ID}} (FName Key) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32 \mbox{\hyperlink{class_f_online_session_settings_a96f2a51db0806ee3d11d03488ff91a75}{Num\+Public\+Connections}}
+\item 
+int32 \mbox{\hyperlink{class_f_online_session_settings_a97d6b8173931965fc8cc6c6adb6361b2}{Num\+Private\+Connections}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a2fd78f31da55628247b3d2271f73839e}{b\+Should\+Advertise}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a918beae2c5e8f2c325ae4a1679935640}{b\+Allow\+Join\+In\+Progress}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a3c5734aa5c24fce41eabb0c72cc764cf}{b\+Is\+LANMatch}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a8c154ef66416f37d7a80e7245422bd28}{b\+Is\+Dedicated}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a10bb737b0162f69bf110edaa38793a21}{b\+Uses\+Stats}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3}{b\+Allow\+Invites}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_ae54dab72798f1fa77b7c9ac527cf0128}{b\+Uses\+Presence}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a802a6a3d132686d4056a0c548d4990b4}{b\+Allow\+Join\+Via\+Presence}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a52b684c9b8cd5ffb6ec046df83d78db6}{b\+Allow\+Join\+Via\+Presence\+Friends\+Only}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a0d320da5065821511a2e6aa53489b00e}{b\+Anti\+Cheat\+Protected}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a3819d6617edd0d04872262299b103a45}{b\+Use\+Lobbies\+If\+Available}}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_settings_a46de3b5d1cb363c75e304e014b04056a}{b\+Use\+Lobbies\+Voice\+Chat\+If\+Available}}
+\item 
+FString \mbox{\hyperlink{class_f_online_session_settings_aeb926e2e99bdb436017924196b0613f3}{Session\+Id\+Override}}
+\item 
+int32 \mbox{\hyperlink{class_f_online_session_settings_a25f0902a71554a0642ffbd242ddc6a0f}{Build\+Unique\+Id}}
+\item 
+FSession\+Settings \mbox{\hyperlink{class_f_online_session_settings_ae5102bba34f6e3dd9a43ed1865c96169}{Settings}}
+\item 
+TUnique\+Net\+Id\+Map$<$ FSession\+Settings $>$ \mbox{\hyperlink{class_f_online_session_settings_a8e5b68e5c6c11e43b93d11fdf06f9eac}{Member\+Settings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container for all settings describing a single online session 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00224}{224}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_online_session_settings_a561d4e37c06d9a432912990a237ce585}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\index{FOnlineSessionSettings@{FOnlineSessionSettings}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{FOnlineSessionSettings()}{FOnlineSessionSettings()}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a561d4e37c06d9a432912990a237ce585} 
+FOnline\+Session\+Settings\+::\+FOnline\+Session\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor, used when serializing a network packet 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00268}{268}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a481fb38d7db07bf539d5df90deb53f1b}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!````~FOnlineSessionSettings@{\texorpdfstring{$\sim$}{\string~}FOnlineSessionSettings}}
+\index{````~FOnlineSessionSettings@{\texorpdfstring{$\sim$}{\string~}FOnlineSessionSettings}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FOnlineSessionSettings()}{\string~FOnlineSessionSettings()}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a481fb38d7db07bf539d5df90deb53f1b} 
+virtual FOnline\+Session\+Settings\+::\texorpdfstring{$\sim$}{\string~}\+FOnline\+Session\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00291}{291}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_online_session_settings_a3eb136d0e3c9358e0917b0b4dc86033a}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!Get@{Get}}
+\index{Get@{Get}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a3eb136d0e3c9358e0917b0b4dc86033a} 
+template$<$typename Value\+Type $>$ \\
+bool FOnline\+Session\+Settings\+::\+Get (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{Value\+Type \&}]{Value}{}\end{DoxyParamCaption}) const}
+
+Gets a key value pair combination that defines a session setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Value} & value of the setting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if found, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_f_online_session_settings_ad8bcb8c640cefe8f54094cf950a9805d}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!GetAdvertisementType@{GetAdvertisementType}}
+\index{GetAdvertisementType@{GetAdvertisementType}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{GetAdvertisementType()}{GetAdvertisementType()}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_ad8bcb8c640cefe8f54094cf950a9805d} 
+EOnline\+Data\+Advertisement\+Type\+::\+Type FOnline\+Session\+Settings\+::\+Get\+Advertisement\+Type (\begin{DoxyParamCaption}\item[{FName}]{Key}{}\end{DoxyParamCaption}) const}
+
+Retrieve a session setting\textquotesingle{}s advertisement type
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key of the setting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the advertisement type for the setting 
+\end{DoxyReturn}
+\Hypertarget{class_f_online_session_settings_a006b0e0b22d66ce3b0cebb5b7c4f4928}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!GetID@{GetID}}
+\index{GetID@{GetID}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{GetID()}{GetID()}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a006b0e0b22d66ce3b0cebb5b7c4f4928} 
+int32 FOnline\+Session\+Settings\+::\+Get\+ID (\begin{DoxyParamCaption}\item[{FName}]{Key}{}\end{DoxyParamCaption}) const}
+
+Retrieve a session setting\textquotesingle{}s ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key of the setting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the ID for the setting 
+\end{DoxyReturn}
+\Hypertarget{class_f_online_session_settings_a3b3b3b8f510ba7105716108744dcc4a3}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!Remove@{Remove}}
+\index{Remove@{Remove}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a3b3b3b8f510ba7105716108744dcc4a3} 
+bool FOnline\+Session\+Settings\+::\+Remove (\begin{DoxyParamCaption}\item[{FName}]{Key}{}\end{DoxyParamCaption})}
+
+Removes a key value pair combination
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if found and removed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_f_online_session_settings_a31a96f80b176b0c6073901b002f67101}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!Set@{Set}}
+\index{Set@{Set}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a31a96f80b176b0c6073901b002f67101} 
+void FOnline\+Session\+Settings\+::\+Set (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{const \mbox{\hyperlink{struct_f_online_session_setting}{FOnline\+Session\+Setting}} \&}]{Src\+Setting}{}\end{DoxyParamCaption})}
+
+Sets a key value pair combination that defines a session setting from an existing session setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Src\+Setting} & setting values \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_online_session_settings_aaa4e3ee04994688938e324832548de15}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!Set@{Set}}
+\index{Set@{Set}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_aaa4e3ee04994688938e324832548de15} 
+template$<$typename Value\+Type $>$ \\
+void FOnline\+Session\+Settings\+::\+Set (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{const Value\+Type \&}]{Value}{, }\item[{EOnline\+Data\+Advertisement\+Type\+::\+Type}]{In\+Type}{}\end{DoxyParamCaption})}
+
+Sets a key value pair combination that defines a session setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Value} & value of the setting \\
+\hline
+{\em In\+Type} & type of online advertisement \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_online_session_settings_ad7cbd671743f0ed15b3e507abc87045d}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!Set@{Set}}
+\index{Set@{Set}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_ad7cbd671743f0ed15b3e507abc87045d} 
+template$<$typename Value\+Type $>$ \\
+void FOnline\+Session\+Settings\+::\+Set (\begin{DoxyParamCaption}\item[{FName}]{Key}{, }\item[{const Value\+Type \&}]{Value}{, }\item[{EOnline\+Data\+Advertisement\+Type\+::\+Type}]{In\+Type}{, }\item[{int32}]{In\+ID}{}\end{DoxyParamCaption})}
+
+Sets a key value pair combination that defines a session setting with an ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & key for the setting \\
+\hline
+{\em Value} & value of the setting \\
+\hline
+{\em In\+Type} & type of online advertisement \\
+\hline
+{\em ID} & ID for this session setting \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bAllowInvites@{bAllowInvites}}
+\index{bAllowInvites@{bAllowInvites}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bAllowInvites}{bAllowInvites}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3} 
+bool FOnline\+Session\+Settings\+::b\+Allow\+Invites}
+
+Whether the match allows invitations for this session or not 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00242}{242}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a918beae2c5e8f2c325ae4a1679935640}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bAllowJoinInProgress@{bAllowJoinInProgress}}
+\index{bAllowJoinInProgress@{bAllowJoinInProgress}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bAllowJoinInProgress}{bAllowJoinInProgress}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a918beae2c5e8f2c325ae4a1679935640} 
+bool FOnline\+Session\+Settings\+::b\+Allow\+Join\+In\+Progress}
+
+Whether joining in progress is allowed or not 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00234}{234}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a802a6a3d132686d4056a0c548d4990b4}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bAllowJoinViaPresence@{bAllowJoinViaPresence}}
+\index{bAllowJoinViaPresence@{bAllowJoinViaPresence}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bAllowJoinViaPresence}{bAllowJoinViaPresence}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a802a6a3d132686d4056a0c548d4990b4} 
+bool FOnline\+Session\+Settings\+::b\+Allow\+Join\+Via\+Presence}
+
+Whether joining via player presence is allowed or not 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00246}{246}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a52b684c9b8cd5ffb6ec046df83d78db6}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bAllowJoinViaPresenceFriendsOnly@{bAllowJoinViaPresenceFriendsOnly}}
+\index{bAllowJoinViaPresenceFriendsOnly@{bAllowJoinViaPresenceFriendsOnly}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bAllowJoinViaPresenceFriendsOnly}{bAllowJoinViaPresenceFriendsOnly}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a52b684c9b8cd5ffb6ec046df83d78db6} 
+bool FOnline\+Session\+Settings\+::b\+Allow\+Join\+Via\+Presence\+Friends\+Only}
+
+Whether joining via player presence is allowed for friends only or not 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00248}{248}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a0d320da5065821511a2e6aa53489b00e}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bAntiCheatProtected@{bAntiCheatProtected}}
+\index{bAntiCheatProtected@{bAntiCheatProtected}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bAntiCheatProtected}{bAntiCheatProtected}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a0d320da5065821511a2e6aa53489b00e} 
+bool FOnline\+Session\+Settings\+::b\+Anti\+Cheat\+Protected}
+
+Whether the server employs anti-\/cheat (punkbuster, vac, etc) 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00250}{250}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a8c154ef66416f37d7a80e7245422bd28}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bIsDedicated@{bIsDedicated}}
+\index{bIsDedicated@{bIsDedicated}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bIsDedicated}{bIsDedicated}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a8c154ef66416f37d7a80e7245422bd28} 
+bool FOnline\+Session\+Settings\+::b\+Is\+Dedicated}
+
+Whether the server is dedicated or player hosted 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00238}{238}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a3c5734aa5c24fce41eabb0c72cc764cf}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bIsLANMatch@{bIsLANMatch}}
+\index{bIsLANMatch@{bIsLANMatch}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bIsLANMatch}{bIsLANMatch}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a3c5734aa5c24fce41eabb0c72cc764cf} 
+bool FOnline\+Session\+Settings\+::b\+Is\+LANMatch}
+
+This game will be lan only and not be visible to external players 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00236}{236}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a2fd78f31da55628247b3d2271f73839e}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bShouldAdvertise@{bShouldAdvertise}}
+\index{bShouldAdvertise@{bShouldAdvertise}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bShouldAdvertise}{bShouldAdvertise}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a2fd78f31da55628247b3d2271f73839e} 
+bool FOnline\+Session\+Settings\+::b\+Should\+Advertise}
+
+Whether this match is publicly advertised on the online service 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00232}{232}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a25f0902a71554a0642ffbd242ddc6a0f}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!BuildUniqueId@{BuildUniqueId}}
+\index{BuildUniqueId@{BuildUniqueId}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{BuildUniqueId}{BuildUniqueId}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a25f0902a71554a0642ffbd242ddc6a0f} 
+int32 FOnline\+Session\+Settings\+::\+Build\+Unique\+Id}
+
+Used to keep different builds from seeing each other during searches 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00259}{259}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a3819d6617edd0d04872262299b103a45}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bUseLobbiesIfAvailable@{bUseLobbiesIfAvailable}}
+\index{bUseLobbiesIfAvailable@{bUseLobbiesIfAvailable}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bUseLobbiesIfAvailable}{bUseLobbiesIfAvailable}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a3819d6617edd0d04872262299b103a45} 
+bool FOnline\+Session\+Settings\+::b\+Use\+Lobbies\+If\+Available}
+
+Whether to prefer lobbies APIs if the platform supports them 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00252}{252}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a46de3b5d1cb363c75e304e014b04056a}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bUseLobbiesVoiceChatIfAvailable@{bUseLobbiesVoiceChatIfAvailable}}
+\index{bUseLobbiesVoiceChatIfAvailable@{bUseLobbiesVoiceChatIfAvailable}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bUseLobbiesVoiceChatIfAvailable}{bUseLobbiesVoiceChatIfAvailable}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a46de3b5d1cb363c75e304e014b04056a} 
+bool FOnline\+Session\+Settings\+::b\+Use\+Lobbies\+Voice\+Chat\+If\+Available}
+
+Whether to create (and auto join) a voice chat room for the lobby, if the platform supports it 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00254}{254}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_ae54dab72798f1fa77b7c9ac527cf0128}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bUsesPresence@{bUsesPresence}}
+\index{bUsesPresence@{bUsesPresence}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bUsesPresence}{bUsesPresence}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_ae54dab72798f1fa77b7c9ac527cf0128} 
+bool FOnline\+Session\+Settings\+::b\+Uses\+Presence}
+
+Whether to display user presence information or not 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00244}{244}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a10bb737b0162f69bf110edaa38793a21}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!bUsesStats@{bUsesStats}}
+\index{bUsesStats@{bUsesStats}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{bUsesStats}{bUsesStats}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a10bb737b0162f69bf110edaa38793a21} 
+bool FOnline\+Session\+Settings\+::b\+Uses\+Stats}
+
+Whether the match should gather stats or not 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00240}{240}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a8e5b68e5c6c11e43b93d11fdf06f9eac}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!MemberSettings@{MemberSettings}}
+\index{MemberSettings@{MemberSettings}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{MemberSettings}{MemberSettings}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a8e5b68e5c6c11e43b93d11fdf06f9eac} 
+TUnique\+Net\+Id\+Map$<$FSession\+Settings$>$ FOnline\+Session\+Settings\+::\+Member\+Settings}
+
+Map of custom settings per session member (Not currently used by every OSS) 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00264}{264}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a97d6b8173931965fc8cc6c6adb6361b2}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!NumPrivateConnections@{NumPrivateConnections}}
+\index{NumPrivateConnections@{NumPrivateConnections}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{NumPrivateConnections}{NumPrivateConnections}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a97d6b8173931965fc8cc6c6adb6361b2} 
+int32 FOnline\+Session\+Settings\+::\+Num\+Private\+Connections}
+
+The number of connections that are private (invite/password) only 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00230}{230}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_a96f2a51db0806ee3d11d03488ff91a75}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!NumPublicConnections@{NumPublicConnections}}
+\index{NumPublicConnections@{NumPublicConnections}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{NumPublicConnections}{NumPublicConnections}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_a96f2a51db0806ee3d11d03488ff91a75} 
+int32 FOnline\+Session\+Settings\+::\+Num\+Public\+Connections}
+
+The number of publicly available connections advertised 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00228}{228}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_aeb926e2e99bdb436017924196b0613f3}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!SessionIdOverride@{SessionIdOverride}}
+\index{SessionIdOverride@{SessionIdOverride}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SessionIdOverride}{SessionIdOverride}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_aeb926e2e99bdb436017924196b0613f3} 
+FString FOnline\+Session\+Settings\+::\+Session\+Id\+Override}
+
+Manual override for the Session Id instead of having one assigned by the backend. Its size may be restricted depending on the platform 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00256}{256}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_settings_ae5102bba34f6e3dd9a43ed1865c96169}\index{FOnlineSessionSettings@{FOnlineSessionSettings}!Settings@{Settings}}
+\index{Settings@{Settings}!FOnlineSessionSettings@{FOnlineSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Settings}{Settings}}
+{\footnotesize\ttfamily \label{class_f_online_session_settings_ae5102bba34f6e3dd9a43ed1865c96169} 
+FSession\+Settings FOnline\+Session\+Settings\+::\+Settings}
+
+Array of custom session settings 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00261}{261}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/Online\+Session\+Settings.\+h\end{DoxyCompactItemize}

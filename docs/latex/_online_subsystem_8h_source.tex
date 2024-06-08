@@ -1,0 +1,341 @@
+\doxysection{Online\+Subsystem.\+h}
+\hypertarget{_online_subsystem_8h_source}{}\label{_online_subsystem_8h_source}\index{PlayTagGame/Source/PlayTagGame/OnlineSubsystem.h@{PlayTagGame/Source/PlayTagGame/OnlineSubsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00001}00001\ \textcolor{comment}{//\ Copyright\ Epic\ Games,\ Inc.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00003}00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}Modules/ModuleManager.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}OnlineSubsystemModule.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}OnlineSubsystemTypes.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}OnlineDelegateMacros.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}OnlineSubsystemNames.h"{}}\ \textcolor{comment}{//\ IWYU\ pragma:\ keep}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00011}00011\ \textcolor{keyword}{class\ }IModuleInterface;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00013}00013\ \textcolor{keyword}{class\ }FOnlineNotificationHandler;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00014}00014\ \textcolor{keyword}{class\ }FOnlineNotificationTransportManager;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00015}00015\ \textcolor{keyword}{class\ }IMessageSanitizer;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00016}00016\ \textcolor{keyword}{class\ }IOnlineAchievements;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00017}00017\ \textcolor{keyword}{class\ }IOnlineChat;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00018}00018\ \textcolor{keyword}{class\ }IOnlineEntitlements;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00019}00019\ \textcolor{keyword}{class\ }IOnlineEvents;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00020}00020\ \textcolor{keyword}{class\ }IOnlineExternalUI;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00021}00021\ \textcolor{keyword}{class\ }IOnlineFriends;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00022}00022\ \textcolor{keyword}{class\ }IOnlineGroups;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00023}00023\ \textcolor{keyword}{class\ }IOnlineIdentity;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00024}00024\ \textcolor{keyword}{class\ }IOnlineLeaderboards;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00025}00025\ \textcolor{keyword}{class\ }IOnlineMessage;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00026}00026\ \textcolor{keyword}{class\ }IOnlinePartySystem;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00027}00027\ \textcolor{keyword}{class\ }IOnlinePresence;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00028}00028\ \textcolor{keyword}{class\ }IOnlinePurchase;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00029}00029\ \textcolor{keyword}{class\ }IOnlineSession;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00030}00030\ \textcolor{keyword}{class\ }IOnlineSharedCloud;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00031}00031\ \textcolor{keyword}{class\ }IOnlineSharing;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00032}00032\ \textcolor{keyword}{class\ }IOnlineStoreV2;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00033}00033\ \textcolor{keyword}{class\ }IOnlineTime;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00034}00034\ \textcolor{keyword}{class\ }IOnlineTitleFile;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00035}00035\ \textcolor{keyword}{class\ }IOnlineTurnBased;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00036}00036\ \textcolor{keyword}{class\ }IOnlineUser;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00037}00037\ \textcolor{keyword}{class\ }IOnlineUserCloud;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00038}00038\ \textcolor{keyword}{class\ }IOnlineVoice;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00039}00039\ \textcolor{keyword}{class\ }IOnlineStats;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00040}00040\ \textcolor{keyword}{class\ }IOnlineGameActivity;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00041}00041\ \textcolor{keyword}{class\ }IOnlineGameItemStats;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00042}00042\ \textcolor{keyword}{class\ }IOnlineGameMatches;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00044}00044\ LLM\_DECLARE\_TAG\_API(OnlineSubsystem,\ ONLINESUBSYSTEM\_API);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00046}00046\ ONLINESUBSYSTEM\_API\ DECLARE\_LOG\_CATEGORY\_EXTERN(LogOnline,\ Log,\ All);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00047}00047\ ONLINESUBSYSTEM\_API\ DECLARE\_LOG\_CATEGORY\_EXTERN(LogOnlineGame,\ Log,\ All);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00050}00050\ DECLARE\_STATS\_GROUP(TEXT(\textcolor{stringliteral}{"{}Online"{}}),\ STATGROUP\_Online,\ STATCAT\_Advanced);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00052}00052\ DECLARE\_CYCLE\_STAT\_EXTERN(TEXT(\textcolor{stringliteral}{"{}OnlineAsync"{}}),\ STAT\_Online\_Async,\ STATGROUP\_Online,\ ONLINESUBSYSTEM\_API);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00054}00054\ DECLARE\_DWORD\_ACCUMULATOR\_STAT\_EXTERN(TEXT(\textcolor{stringliteral}{"{}NumTasks"{}}),\ STAT\_Online\_AsyncTasks,\ STATGROUP\_Online,\ ONLINESUBSYSTEM\_API);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00056}00056\ DECLARE\_CYCLE\_STAT\_EXTERN(TEXT(\textcolor{stringliteral}{"{}SessionInt"{}}),\ STAT\_Session\_Interface,\ STATGROUP\_Online,\ ONLINESUBSYSTEM\_API);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00058}00058\ DECLARE\_CYCLE\_STAT\_EXTERN(TEXT(\textcolor{stringliteral}{"{}VoiceInt"{}}),\ STAT\_Voice\_Interface,\ STATGROUP\_Online,\ ONLINESUBSYSTEM\_API);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00060}00060\ \textcolor{preprocessor}{\#ifndef\ ONLINE\_LOG\_PREFIX}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00061}00061\ \textcolor{preprocessor}{\#define\ ONLINE\_LOG\_PREFIX\ TEXT("{}OSS:\ "{})}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00062}00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00064}00064\ \textcolor{preprocessor}{\#define\ UE\_LOG\_ONLINE(Verbosity,\ Format,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00065}00065\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ UE\_LOG(LogOnline,\ Verbosity,\ TEXT("{}\%s\%s"{}),\ ONLINE\_LOG\_PREFIX,\ *FString::Printf(Format,\ \#\#\_\_VA\_ARGS\_\_));\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00067}00067\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00069}00069\ \textcolor{preprocessor}{\#define\ UE\_CLOG\_ONLINE(Conditional,\ Verbosity,\ Format,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00070}00070\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ UE\_CLOG(Conditional,\ LogOnline,\ Verbosity,\ TEXT("{}\%s\%s"{}),\ ONLINE\_LOG\_PREFIX,\ *FString::Printf(Format,\ \#\#\_\_VA\_ARGS\_\_));\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00072}00072\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00074}00074\ \textcolor{preprocessor}{\#define\ UE\_LOG\_ONLINE\_ONCE(Verbosity,\ Format,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00075}00075\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00076}00076\ \textcolor{preprocessor}{\ \ \ \ static\ bool\ bLogged\ =\ false;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00077}00077\ \textcolor{preprocessor}{\ \ \ \ UE\_CLOG\_ONLINE(!bLogged,\ Verbosity,\ Format,\ \#\#\_\_VA\_ARGS\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00078}00078\ \textcolor{preprocessor}{\ \ \ \ bLogged\ =\ true;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00079}00079\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00082}00082\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineSession,\ ESPMode::ThreadSafe>\ IOnlineSessionPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00083}00083\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineFriends,\ ESPMode::ThreadSafe>\ IOnlineFriendsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00084}00084\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlinePartySystem,\ ESPMode::ThreadSafe>\ IOnlinePartyPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00085}00085\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IMessageSanitizer,\ ESPMode::ThreadSafe>\ IMessageSanitizerPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00086}00086\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineGroups,\ ESPMode::ThreadSafe>\ IOnlineGroupsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00087}00087\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineSharedCloud,\ ESPMode::ThreadSafe>\ IOnlineSharedCloudPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00088}00088\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineUserCloud,\ ESPMode::ThreadSafe>\ IOnlineUserCloudPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00089}00089\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineEntitlements,\ ESPMode::ThreadSafe>\ IOnlineEntitlementsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00090}00090\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineLeaderboards,\ ESPMode::ThreadSafe>\ IOnlineLeaderboardsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00091}00091\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineVoice,\ ESPMode::ThreadSafe>\ IOnlineVoicePtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00092}00092\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineExternalUI,\ ESPMode::ThreadSafe>\ IOnlineExternalUIPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00093}00093\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineTime,\ ESPMode::ThreadSafe>\ IOnlineTimePtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00094}00094\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineIdentity,\ ESPMode::ThreadSafe>\ IOnlineIdentityPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00095}00095\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineTitleFile,\ ESPMode::ThreadSafe>\ IOnlineTitleFilePtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00096}00096\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineStoreV2,\ ESPMode::ThreadSafe>\ IOnlineStoreV2Ptr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00097}00097\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlinePurchase,\ ESPMode::ThreadSafe>\ IOnlinePurchasePtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00098}00098\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineEvents,\ ESPMode::ThreadSafe>\ IOnlineEventsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00099}00099\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineAchievements,\ ESPMode::ThreadSafe>\ IOnlineAchievementsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00100}00100\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineSharing,\ ESPMode::ThreadSafe>\ IOnlineSharingPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00101}00101\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineUser,\ ESPMode::ThreadSafe>\ IOnlineUserPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00102}00102\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineMessage,\ ESPMode::ThreadSafe>\ IOnlineMessagePtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00103}00103\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlinePresence,\ ESPMode::ThreadSafe>\ IOnlinePresencePtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00104}00104\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineChat,\ ESPMode::ThreadSafe>\ IOnlineChatPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00105}00105\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineTurnBased,\ ESPMode::ThreadSafe>\ IOnlineTurnBasedPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00106}00106\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineTournament,\ ESPMode::ThreadSafe>\ IOnlineTournamentPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00107}00107\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ FOnlineNotificationHandler,\ ESPMode::ThreadSafe>\ FOnlineNotificationHandlerPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00108}00108\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ FOnlineNotificationTransportManager,\ ESPMode::ThreadSafe>\ FOnlineNotificationTransportManagerPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00109}00109\ \textcolor{keyword}{typedef}\ TSharedPtr<class\ IOnlineStats,\ ESPMode::ThreadSafe>\ IOnlineStatsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00110}00110\ \textcolor{keyword}{typedef}\ TSharedPtr<IOnlineGameActivity,\ ESPMode::ThreadSafe>\ IOnlineGameActivityPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00111}00111\ \textcolor{keyword}{typedef}\ TSharedPtr<IOnlineGameItemStats,\ ESPMode::ThreadSafe>\ IOnlineGameItemStatsPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00112}00112\ \textcolor{keyword}{typedef}\ TSharedPtr<IOnlineGameMatches,\ ESPMode::ThreadSafe>\ IOnlineGameMatchesPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00121}00121\ DECLARE\_MULTICAST\_DELEGATE\_ThreeParams(FOnConnectionStatusChanged,\ \textcolor{keyword}{const}\ FString\&\ \textcolor{comment}{/*ServiceName*/},\ EOnlineServerConnectionStatus::Type\ \textcolor{comment}{/*LastConnectionState*/},\ EOnlineServerConnectionStatus::Type\ \textcolor{comment}{/*ConnectionState*/});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00122}00122\ \textcolor{keyword}{typedef}\ FOnConnectionStatusChanged::FDelegate\ FOnConnectionStatusChangedDelegate;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00130}00130\ DECLARE\_MULTICAST\_DELEGATE\_TwoParams(FOnOnlineEnvironmentChanged,\ EOnlineEnvironment::Type\ \textcolor{comment}{/*LastEnvironment*/},\ EOnlineEnvironment::Type\ \textcolor{comment}{/*Environment*/});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00131}00131\ \textcolor{keyword}{typedef}\ FOnOnlineEnvironmentChanged::FDelegate\ FOnOnlineEnvironmentChangedDelegate;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00140}00140\ DECLARE\_MULTICAST\_DELEGATE\_OneParam(FOnConfigChanged,\ \textcolor{keyword}{const}\ TSet<FString>\&\ \textcolor{comment}{/*ConfigSections*/});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00141}00141\ \textcolor{keyword}{typedef}\ FOnConfigChanged::FDelegate\ FOnConfigChangedDelegate;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00146}\mbox{\hyperlink{class_i_online_subsystem}{00146}}\ \textcolor{keyword}{class\ }ONLINESUBSYSTEM\_API\ \mbox{\hyperlink{class_i_online_subsystem}{IOnlineSubsystem}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00147}00147\ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00148}00148\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00150}\mbox{\hyperlink{class_i_online_subsystem_a18f0b5e0124cd5e24d4f7f20dd0fed1a}{00150}}\ \ \ \ \ \mbox{\hyperlink{class_i_online_subsystem_a18f0b5e0124cd5e24d4f7f20dd0fed1a}{IOnlineSubsystem}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00152}00152\ \ \ \ \ FOnlineNotificationHandlerPtr\ OnlineNotificationHandler;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00153}00153\ \ \ \ \ FOnlineNotificationTransportManagerPtr\ OnlineNotificationTransportManager;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00155}00155\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00156}00156\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00157}00157\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_online_subsystem}{\string~IOnlineSubsystem}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00164}\mbox{\hyperlink{class_i_online_subsystem_a5c362823c50a78952ec14f5754feceb0}{00164}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_i_online_subsystem}{IOnlineSubsystem}}*\ \mbox{\hyperlink{class_i_online_subsystem_a5c362823c50a78952ec14f5754feceb0}{Get}}(\textcolor{keyword}{const}\ FName\&\ SubsystemName\ =\ NAME\_None)}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00165}00165\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ OnlineSubsystemModuleName\ =\ TEXT(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00167}00167\ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(OnlineSubsystemModuleName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.GetOnlineSubsystem(SubsystemName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00178}\mbox{\hyperlink{class_i_online_subsystem_a5755ab3c7e5182ebf276843db6073d45}{00178}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_i_online_subsystem}{IOnlineSubsystem}}*\ \mbox{\hyperlink{class_i_online_subsystem_a5755ab3c7e5182ebf276843db6073d45}{GetByPlatform}}(\textcolor{keywordtype}{bool}\ bAutoLoad=\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00179}00179\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ OnlineSubsystemModuleName\ =\ TEXT(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bAutoLoad\ ||\ FModuleManager::Get().IsModuleLoaded(OnlineSubsystemModuleName))}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00182}00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(OnlineSubsystemModuleName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.GetNativeSubsystem(bAutoLoad);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00185}00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00187}00187\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00197}\mbox{\hyperlink{class_i_online_subsystem_a65265d1256772181ecb20bc89dde2a6d}{00197}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_i_online_subsystem}{IOnlineSubsystem}}*\ \mbox{\hyperlink{class_i_online_subsystem_a65265d1256772181ecb20bc89dde2a6d}{GetByConfig}}(\textcolor{keyword}{const}\ FString\&\ ConfigString,\ \textcolor{keywordtype}{bool}\ bAutoLoad\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00198}00198\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00199}00199\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ OnlineSubsystemModuleName\ =\ TEXT(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00200}00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bAutoLoad\ ||\ FModuleManager::Get().IsModuleLoaded(OnlineSubsystemModuleName))}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00201}00201\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(OnlineSubsystemModuleName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.GetSubsystemByConfig(ConfigString,\ bAutoLoad);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00204}00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00206}00206\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00212}\mbox{\hyperlink{class_i_online_subsystem_aaf598ea6dcd7525cbfec5e0d7f7a7fd0}{00212}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_aaf598ea6dcd7525cbfec5e0d7f7a7fd0}{Destroy}}(FName\ SubsystemName)}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00213}00213\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00214}00214\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ OnlineSubsystemModuleName\ =\ TEXT(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00215}00215\ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(OnlineSubsystemModuleName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.DestroyOnlineSubsystem(SubsystemName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00217}00217\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00226}\mbox{\hyperlink{class_i_online_subsystem_adc85f337395f55e446faeba8b3b05722}{00226}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_adc85f337395f55e446faeba8b3b05722}{ReloadDefaultSubsystem}}()}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00227}00227\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ OnlineSubsystemModuleName\ =\ TEXT(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00229}00229\ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(OnlineSubsystemModuleName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00230}00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.ReloadDefaultSubsystem();}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00231}00231\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00238}\mbox{\hyperlink{class_i_online_subsystem_ade5009c0f8476a5d9bfaad275ea3e02b}{00238}}\ \ \ \ \ FORCENOINLINE\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_ade5009c0f8476a5d9bfaad275ea3e02b}{DoesInstanceExist}}(\textcolor{keyword}{const}\ FName\&\ SubsystemName\ =\ NAME\_None)}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00239}00239\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FModuleManager::Get().IsModuleLoaded(\textcolor{stringliteral}{"{}OnlineSubsystem"{}}))}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00241}00241\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.DoesInstanceExist(SubsystemName);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00244}00244\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00246}00246\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00253}\mbox{\hyperlink{class_i_online_subsystem_a4642e083c0e4cf1872858ccaad807696}{00253}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a4642e083c0e4cf1872858ccaad807696}{IsLoaded}}(\textcolor{keyword}{const}\ FName\&\ SubsystemName\ =\ NAME\_None)}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00254}00254\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00255}00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FModuleManager::Get().IsModuleLoaded(\textcolor{stringliteral}{"{}OnlineSubsystem"{}}))}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00256}00256\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ FOnlineSubsystemModule\&\ OSSModule\ =\ FModuleManager::GetModuleChecked<FOnlineSubsystemModule>(\textcolor{stringliteral}{"{}OnlineSubsystem"{}});\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OSSModule.IsOnlineSubsystemLoaded(SubsystemName);\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00259}00259\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00261}00261\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00268}\mbox{\hyperlink{class_i_online_subsystem_a7de8d160087527cef8413ef714d61c73}{00268}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a7de8d160087527cef8413ef714d61c73}{IsEnabled}}(\textcolor{keyword}{const}\ FName\&\ SubsystemName,\ \textcolor{keyword}{const}\ FName\&\ InstanceName\ =\ NAME\_None);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00275}\mbox{\hyperlink{class_i_online_subsystem_a75952a19687a2975a4866dbb32967f75}{00275}}\ \ \ \ \ \textcolor{keyword}{virtual}\ FName\ \mbox{\hyperlink{class_i_online_subsystem_a75952a19687a2975a4866dbb32967f75}{GetSubsystemName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00284}\mbox{\hyperlink{class_i_online_subsystem_acff2864b0adec6efd42fa11bd6cc0e4b}{00284}}\ \ \ \ \ \textcolor{keyword}{virtual}\ FName\ \mbox{\hyperlink{class_i_online_subsystem_acff2864b0adec6efd42fa11bd6cc0e4b}{GetInstanceName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00291}\mbox{\hyperlink{class_i_online_subsystem_ac0ac8a1ab4f4c92401ef1113f39ebfc9}{00291}}\ \ \ \ \ \textcolor{keyword}{static}\ FString\ \mbox{\hyperlink{class_i_online_subsystem_ac0ac8a1ab4f4c92401ef1113f39ebfc9}{GetLocalPlatformName}}();}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00294}\mbox{\hyperlink{class_i_online_subsystem_ae8af484847b34cea8c9cb4c7ba9eaee5}{00294}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_ae8af484847b34cea8c9cb4c7ba9eaee5}{IsEnabled}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00300}\mbox{\hyperlink{class_i_online_subsystem_aa50c2ff1c0c5190aef2015f53661cca2}{00300}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineSessionPtr\ \mbox{\hyperlink{class_i_online_subsystem_aa50c2ff1c0c5190aef2015f53661cca2}{GetSessionInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00301}00301\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00306}\mbox{\hyperlink{class_i_online_subsystem_a55b8d6133ec240b7414f2da89305bf2d}{00306}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineFriendsPtr\ \mbox{\hyperlink{class_i_online_subsystem_a55b8d6133ec240b7414f2da89305bf2d}{GetFriendsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00314}\mbox{\hyperlink{class_i_online_subsystem_ac7bcfe55fc7825697186b6ba02175341}{00314}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IMessageSanitizerPtr\ \mbox{\hyperlink{class_i_online_subsystem_ac7bcfe55fc7825697186b6ba02175341}{GetMessageSanitizer}}(int32\ LocalUserNum,\ FString\&\ OutAuthTypeToExclude)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00320}\mbox{\hyperlink{class_i_online_subsystem_a89cbd83e9cf99150fec2f5ec43cad1a0}{00320}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineGroupsPtr\ \mbox{\hyperlink{class_i_online_subsystem_a89cbd83e9cf99150fec2f5ec43cad1a0}{GetGroupsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00321}00321\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00326}\mbox{\hyperlink{class_i_online_subsystem_a8aa27fb17597f4a08dc848c8074df289}{00326}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlinePartyPtr\ \mbox{\hyperlink{class_i_online_subsystem_a8aa27fb17597f4a08dc848c8074df289}{GetPartyInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00327}00327\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00332}\mbox{\hyperlink{class_i_online_subsystem_a7519a00954be17de488a0ff951e75a2a}{00332}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineSharedCloudPtr\ \mbox{\hyperlink{class_i_online_subsystem_a7519a00954be17de488a0ff951e75a2a}{GetSharedCloudInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00338}\mbox{\hyperlink{class_i_online_subsystem_a987ca9db2716bad2d015bfba0043e733}{00338}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineUserCloudPtr\ \mbox{\hyperlink{class_i_online_subsystem_a987ca9db2716bad2d015bfba0043e733}{GetUserCloudInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00344}\mbox{\hyperlink{class_i_online_subsystem_ae7a24c91aba7d6ce32335a5250bdc6a5}{00344}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineEntitlementsPtr\ \mbox{\hyperlink{class_i_online_subsystem_ae7a24c91aba7d6ce32335a5250bdc6a5}{GetEntitlementsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00350}\mbox{\hyperlink{class_i_online_subsystem_a0ed9692a0d0a4f583fbc244adfe47d0c}{00350}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineLeaderboardsPtr\ \mbox{\hyperlink{class_i_online_subsystem_a0ed9692a0d0a4f583fbc244adfe47d0c}{GetLeaderboardsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00356}\mbox{\hyperlink{class_i_online_subsystem_a14ab992fc11ce42ba96260b5b05ff4f9}{00356}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineVoicePtr\ \mbox{\hyperlink{class_i_online_subsystem_a14ab992fc11ce42ba96260b5b05ff4f9}{GetVoiceInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00357}00357\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00362}\mbox{\hyperlink{class_i_online_subsystem_a01d93272f2ce7ba26bee514742659e71}{00362}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineExternalUIPtr\ \mbox{\hyperlink{class_i_online_subsystem_a01d93272f2ce7ba26bee514742659e71}{GetExternalUIInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00368}\mbox{\hyperlink{class_i_online_subsystem_a38374a1aeaa2e12280447dca9c86c7c5}{00368}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineTimePtr\ \mbox{\hyperlink{class_i_online_subsystem_a38374a1aeaa2e12280447dca9c86c7c5}{GetTimeInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00369}00369\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00374}\mbox{\hyperlink{class_i_online_subsystem_a237e3aa53d64b1ee7b4725710b4a48ff}{00374}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineIdentityPtr\ \mbox{\hyperlink{class_i_online_subsystem_a237e3aa53d64b1ee7b4725710b4a48ff}{GetIdentityInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00375}00375\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00380}\mbox{\hyperlink{class_i_online_subsystem_a73f6c34db00ad9e4958b51103ac26ad3}{00380}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineTitleFilePtr\ \mbox{\hyperlink{class_i_online_subsystem_a73f6c34db00ad9e4958b51103ac26ad3}{GetTitleFileInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00381}00381\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00386}\mbox{\hyperlink{class_i_online_subsystem_aca85b252830609caf84d18a39f157555}{00386}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineStoreV2Ptr\ \mbox{\hyperlink{class_i_online_subsystem_aca85b252830609caf84d18a39f157555}{GetStoreV2Interface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00392}\mbox{\hyperlink{class_i_online_subsystem_ab80d78257d491a293bfa0ed0d593fea1}{00392}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlinePurchasePtr\ \mbox{\hyperlink{class_i_online_subsystem_ab80d78257d491a293bfa0ed0d593fea1}{GetPurchaseInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00393}00393\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00398}\mbox{\hyperlink{class_i_online_subsystem_a3bd972741a81fd231961a30d2fa549eb}{00398}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineEventsPtr\ \mbox{\hyperlink{class_i_online_subsystem_a3bd972741a81fd231961a30d2fa549eb}{GetEventsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00399}00399\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00404}\mbox{\hyperlink{class_i_online_subsystem_a6e0391467a059c99d15ae2cd88728ac8}{00404}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineAchievementsPtr\ \mbox{\hyperlink{class_i_online_subsystem_a6e0391467a059c99d15ae2cd88728ac8}{GetAchievementsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00405}00405\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00410}\mbox{\hyperlink{class_i_online_subsystem_ad1276fd5e263367229d410f9fc8e060e}{00410}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineSharingPtr\ \mbox{\hyperlink{class_i_online_subsystem_ad1276fd5e263367229d410f9fc8e060e}{GetSharingInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00411}00411\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00416}\mbox{\hyperlink{class_i_online_subsystem_a25137e6193cebdaaaf7c0a613fb87136}{00416}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineUserPtr\ \mbox{\hyperlink{class_i_online_subsystem_a25137e6193cebdaaaf7c0a613fb87136}{GetUserInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00417}00417\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00422}\mbox{\hyperlink{class_i_online_subsystem_ac821d64023690656f0d8a94ea316204c}{00422}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineMessagePtr\ \mbox{\hyperlink{class_i_online_subsystem_ac821d64023690656f0d8a94ea316204c}{GetMessageInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00423}00423\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00428}\mbox{\hyperlink{class_i_online_subsystem_a2a32fc5055d1082d202a9b8f84cdcf7c}{00428}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlinePresencePtr\ \mbox{\hyperlink{class_i_online_subsystem_a2a32fc5055d1082d202a9b8f84cdcf7c}{GetPresenceInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00429}00429\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00434}\mbox{\hyperlink{class_i_online_subsystem_ab7cd0e13e36beb640a62cd3ef87d0dcd}{00434}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineChatPtr\ \mbox{\hyperlink{class_i_online_subsystem_ab7cd0e13e36beb640a62cd3ef87d0dcd}{GetChatInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00435}00435\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00440}\mbox{\hyperlink{class_i_online_subsystem_a572f94d68662f5a816d6b5b7e6c6165e}{00440}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineStatsPtr\ \mbox{\hyperlink{class_i_online_subsystem_a572f94d68662f5a816d6b5b7e6c6165e}{GetStatsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00441}00441\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00446}\mbox{\hyperlink{class_i_online_subsystem_afb540f0084e28d07568fe7e19b6991d8}{00446}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineGameActivityPtr\ \mbox{\hyperlink{class_i_online_subsystem_afb540f0084e28d07568fe7e19b6991d8}{GetGameActivityInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00447}00447\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00452}\mbox{\hyperlink{class_i_online_subsystem_aedc69837ce13da746582ca3674d086a5}{00452}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineGameItemStatsPtr\ \mbox{\hyperlink{class_i_online_subsystem_aedc69837ce13da746582ca3674d086a5}{GetGameItemStatsInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00453}00453\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00458}\mbox{\hyperlink{class_i_online_subsystem_ad6f06857416b54fbd0491dbf075ea978}{00458}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineGameMatchesPtr\ \mbox{\hyperlink{class_i_online_subsystem_ad6f06857416b54fbd0491dbf075ea978}{GetGameMatchesInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00459}00459\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00464}\mbox{\hyperlink{class_i_online_subsystem_a7a25c6e2c5a6503c8486f2e257e688e9}{00464}}\ \ \ \ \ FOnlineNotificationHandlerPtr\ \mbox{\hyperlink{class_i_online_subsystem_a7a25c6e2c5a6503c8486f2e257e688e9}{GetOnlineNotificationHandler}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00465}00465\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00466}00466\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OnlineNotificationHandler;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00467}00467\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00468}00468\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00473}\mbox{\hyperlink{class_i_online_subsystem_a15792577d1a5a1b959e69a79fcaf54d2}{00473}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineTurnBasedPtr\ \mbox{\hyperlink{class_i_online_subsystem_a15792577d1a5a1b959e69a79fcaf54d2}{GetTurnBasedInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00474}00474\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00479}\mbox{\hyperlink{class_i_online_subsystem_ab1d95384e59bb73e115ac32d6a310640}{00479}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineTournamentPtr\ \mbox{\hyperlink{class_i_online_subsystem_ab1d95384e59bb73e115ac32d6a310640}{GetTournamentInterface}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00485}\mbox{\hyperlink{class_i_online_subsystem_a835deb29323013fd84fffaebdcc826b8}{00485}}\ \ \ \ \ FOnlineNotificationTransportManagerPtr\ \mbox{\hyperlink{class_i_online_subsystem_a835deb29323013fd84fffaebdcc826b8}{GetOnlineNotificationTransportManager}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00486}00486\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00487}00487\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OnlineNotificationTransportManager;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00488}00488\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00495}\mbox{\hyperlink{class_i_online_subsystem_a6254e604986fa213cdff06572a97765f}{00495}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{class\ }UObject*\ \mbox{\hyperlink{class_i_online_subsystem_a6254e604986fa213cdff06572a97765f}{GetNamedInterface}}(FName\ InterfaceName)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00503}\mbox{\hyperlink{class_i_online_subsystem_a4c0dc2b4fd7b45e4ac89b878e28428ed}{00503}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_a4c0dc2b4fd7b45e4ac89b878e28428ed}{SetNamedInterface}}(FName\ InterfaceName,\ \textcolor{keyword}{class}\ UObject*\ NewInterface)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00512}\mbox{\hyperlink{class_i_online_subsystem_a5badeb307e8d7f6afeaa07b3d4065ab5}{00512}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a5badeb307e8d7f6afeaa07b3d4065ab5}{IsDedicated}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00513}00513\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00520}\mbox{\hyperlink{class_i_online_subsystem_aa1d05224fe18ffd2e191fbe8264d9217}{00520}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_aa1d05224fe18ffd2e191fbe8264d9217}{IsServer}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00521}00521\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00527}\mbox{\hyperlink{class_i_online_subsystem_a3383dbc6a5a90b9e8f8638fe8f4e28c4}{00527}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_a3383dbc6a5a90b9e8f8638fe8f4e28c4}{SetForceDedicated}}(\textcolor{keywordtype}{bool}\ bForce)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00528}00528\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00536}\mbox{\hyperlink{class_i_online_subsystem_a26cadb4dcebf0aeac625e3c78ee6bead}{00536}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a26cadb4dcebf0aeac625e3c78ee6bead}{IsLocalPlayer}}(\textcolor{keyword}{const}\ FUniqueNetId\&\ UniqueId)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00537}00537\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00542}\mbox{\hyperlink{class_i_online_subsystem_a8e60c8cc5765adaeee7ad58a356802e0}{00542}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a8e60c8cc5765adaeee7ad58a356802e0}{Init}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00547}\mbox{\hyperlink{class_i_online_subsystem_a8432be38927674ca6191e8c4081c4817}{00547}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_a8432be38927674ca6191e8c4081c4817}{PreUnload}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00548}00548\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00553}\mbox{\hyperlink{class_i_online_subsystem_a239d972c767cc44db6738c609c2c4d84}{00553}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a239d972c767cc44db6738c609c2c4d84}{Shutdown}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00554}00554\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00560}\mbox{\hyperlink{class_i_online_subsystem_a810972bae1cd4f650c219e4ebabffffd}{00560}}\ \ \ \ \ \textcolor{keyword}{virtual}\ FString\ \mbox{\hyperlink{class_i_online_subsystem_a810972bae1cd4f650c219e4ebabffffd}{GetAppId}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00561}00561\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00571}\mbox{\hyperlink{class_i_online_subsystem_a8683c2f420649d6e95df94ba73d62dfe}{00571}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_online_subsystem_a8683c2f420649d6e95df94ba73d62dfe}{Exec}}(\textcolor{keyword}{class}\ UWorld*\ InWorld,\ \textcolor{keyword}{const}\ TCHAR*\ Cmd,\ FOutputDevice\&\ Ar)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00572}00572\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00576}\mbox{\hyperlink{class_i_online_subsystem_a63bed9656cd688319799c77f9c5a22e5}{00576}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_a63bed9656cd688319799c77f9c5a22e5}{SetUsingMultiplayerFeatures}}(\textcolor{keyword}{const}\ FUniqueNetId\&\ UniqueId,\ \textcolor{keywordtype}{bool}\ bUsingMP)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00577}00577\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00585}\mbox{\hyperlink{class_i_online_subsystem_abfe5e5db444afaaaea1e29be1dfb5597}{00585}}\ \ \ \ \ \mbox{\hyperlink{class_i_online_subsystem_abfe5e5db444afaaaea1e29be1dfb5597}{DEFINE\_ONLINE\_DELEGATE\_THREE\_PARAM}}(OnConnectionStatusChanged,\ \textcolor{keyword}{const}\ FString\&\ \textcolor{comment}{/*ServiceName*/},\ EOnlineServerConnectionStatus::Type\ \textcolor{comment}{/*LastConnectionState*/},\ EOnlineServerConnectionStatus::Type\ \textcolor{comment}{/*ConnectionState*/});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00586}00586\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00590}\mbox{\hyperlink{class_i_online_subsystem_a70c0b4cccac391fdd867bf00f154eb27}{00590}}\ \ \ \ \ \textcolor{keyword}{virtual}\ EOnlineEnvironment::Type\ \mbox{\hyperlink{class_i_online_subsystem_a70c0b4cccac391fdd867bf00f154eb27}{GetOnlineEnvironment}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00591}00591\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00595}\mbox{\hyperlink{class_i_online_subsystem_aa3844c34b09fdbaba3cae0974d8e1c8c}{00595}}\ \ \ \ \ \textcolor{keyword}{virtual}\ FString\ \mbox{\hyperlink{class_i_online_subsystem_aa3844c34b09fdbaba3cae0974d8e1c8c}{GetOnlineEnvironmentName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00596}00596\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00603}\mbox{\hyperlink{class_i_online_subsystem_a4f1504c5041acf481e04c47126f99f74}{00603}}\ \ \ \ \ \mbox{\hyperlink{class_i_online_subsystem_a4f1504c5041acf481e04c47126f99f74}{DEFINE\_ONLINE\_DELEGATE\_TWO\_PARAM}}(OnOnlineEnvironmentChanged,\ EOnlineEnvironment::Type\ \textcolor{comment}{/*LastEnvironment*/},\ EOnlineEnvironment::Type\ \textcolor{comment}{/*Environment*/});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00604}00604\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00608}\mbox{\hyperlink{class_i_online_subsystem_a1d2640d37bad8475a74edd9a41f8e4a4}{00608}}\ \ \ \ \ \textcolor{keyword}{virtual}\ FText\ \mbox{\hyperlink{class_i_online_subsystem_a1d2640d37bad8475a74edd9a41f8e4a4}{GetOnlineServiceName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00609}00609\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00613}\mbox{\hyperlink{class_i_online_subsystem_a21a5bf3b202bce508636aa7611adda8f}{00613}}\ \ \ \ \ \textcolor{keyword}{virtual}\ FText\ \mbox{\hyperlink{class_i_online_subsystem_a21a5bf3b202bce508636aa7611adda8f}{GetSocialPlatformName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00614}00614\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00622}\mbox{\hyperlink{class_i_online_subsystem_a06c3f96170d643b557f77c1e4c3631e1}{00622}}\ \ \ \ \ \mbox{\hyperlink{class_i_online_subsystem_a06c3f96170d643b557f77c1e4c3631e1}{DEFINE\_ONLINE\_DELEGATE\_ONE\_PARAM}}(OnConfigChanged,\ \textcolor{keyword}{const}\ TSet<FString>\&\ \textcolor{comment}{/*ConfigSections*/});}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00623}00623\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00629}\mbox{\hyperlink{class_i_online_subsystem_ae8de02e7aca6e558706c1cb460ee4e0b}{00629}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_online_subsystem_ae8de02e7aca6e558706c1cb460ee4e0b}{ReloadConfigs}}(\textcolor{keyword}{const}\ TSet<FString>\&\ ConfigSections)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00630}00630\ \};}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00631}00631\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00633}00633\ \textcolor{keyword}{typedef}\ TSharedPtr<IOnlineSubsystem,\ ESPMode::ThreadSafe>\ IOnlineSubsystemPtr;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00634}00634\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00639}\mbox{\hyperlink{class_i_online_factory}{00639}}\ \textcolor{keyword}{class\ }ONLINESUBSYSTEM\_API\ \mbox{\hyperlink{class_i_online_factory}{IOnlineFactory}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00640}00640\ \{}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00641}00641\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00643}00643\ \ \ \ \ \mbox{\hyperlink{class_i_online_factory}{IOnlineFactory}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00644}00644\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_online_factory}{\string~IOnlineFactory}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00645}00645\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00652}\mbox{\hyperlink{class_i_online_factory_abeb86e85618722fdcf504b35a9974bb5}{00652}}\ \ \ \ \ \textcolor{keyword}{virtual}\ IOnlineSubsystemPtr\ \mbox{\hyperlink{class_i_online_factory_abeb86e85618722fdcf504b35a9974bb5}{CreateSubsystem}}(FName\ InstanceName)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00653}00653\ \};}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00654}00654\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00660}00660\ ONLINESUBSYSTEM\_API\ int32\ GetBuildUniqueId();}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00661}00661\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00671}00671\ ONLINESUBSYSTEM\_API\ \textcolor{keywordtype}{bool}\ IsPlayerInSessionImpl(\textcolor{keyword}{class}\ IOnlineSession*\ SessionInt,\ FName\ SessionName,\ \textcolor{keyword}{const}\ FUniqueNetId\&\ UniqueId);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00672}00672\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00680}00680\ ONLINESUBSYSTEM\_API\ \textcolor{keywordtype}{bool}\ IsUniqueIdLocal(\textcolor{keyword}{const}\ FUniqueNetId\&\ UniqueId);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00681}00681\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00689}00689\ ONLINESUBSYSTEM\_API\ int32\ GetBeaconPortFromSessionSettings(\textcolor{keyword}{const}\ \textcolor{keyword}{class}\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\ SessionSettings);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00690}00690\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00692}00692\ ONLINESUBSYSTEM\_API\ FUniqueNetIdPtr\ GetFirstSignedInUser(IOnlineIdentityPtr\ IdentityInt);}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00693}00693\ }
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00694}00694\ \textcolor{preprocessor}{\#if\ UE\_ENABLE\_INCLUDE\_ORDER\_DEPRECATED\_IN\_5\_2}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00695}00695\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_subsystem_8h_source_l00696}00696\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,452 @@
+\doxysection{Online\+Session\+Settings.\+h}
+\hypertarget{_online_session_settings_8h_source}{}\label{_online_session_settings_8h_source}\index{PlayTagGame/Source/PlayTagGame/OnlineSessionSettings.h@{PlayTagGame/Source/PlayTagGame/OnlineSessionSettings.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00001}00001\ \textcolor{comment}{//\ Copyright\ Epic\ Games,\ Inc.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00003}00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}OnlineKeyValuePair.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}OnlineSubsystem.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00008}00008\ \textcolor{comment}{//\ NOTE:\ \ Session\ setting\ names\ have\ been\ moved\ to\ OnlineBase\ in\ OnlineSessionNames.h}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ INVALID\_SESSION\_SETTING\_ID\ -\/1}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00016}\mbox{\hyperlink{struct_f_online_session_setting}{00016}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_f_online_session_setting}{FOnlineSessionSetting}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00018}00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00020}\mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{00020}}\ \ \ \ \ FVariantData\ \mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00022}\mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{00022}}\ \ \ \ \ EOnlineDataAdvertisementType::Type\ \mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00024}\mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{00024}}\ \ \ \ \ int32\ \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00026}00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00028}\mbox{\hyperlink{struct_f_online_session_setting_a4ef583fb1bcbf146fd015169b344d45f}{00028}}\ \ \ \ \ \mbox{\hyperlink{struct_f_online_session_setting_a4ef583fb1bcbf146fd015169b344d45f}{FOnlineSessionSetting}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}}(EOnlineDataAdvertisementType::DontAdvertise)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}}(INVALID\_SESSION\_SETTING\_ID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00036}\mbox{\hyperlink{struct_f_online_session_setting_a2913ebd835fac564303dd4547f0a69c3}{00036}}\ \ \ \ \ \mbox{\hyperlink{struct_f_online_session_setting_a2913ebd835fac564303dd4547f0a69c3}{FOnlineSessionSetting}}(Type\&\&\ InData)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}(Forward<Type>(InData))}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}}(EOnlineDataAdvertisementType::DontAdvertise)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}}(INVALID\_SESSION\_SETTING\_ID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00045}\mbox{\hyperlink{struct_f_online_session_setting_a675b6f80647cbc2fcead253af708b96a}{00045}}\ \ \ \ \ \mbox{\hyperlink{struct_f_online_session_setting_a675b6f80647cbc2fcead253af708b96a}{FOnlineSessionSetting}}(Type\&\&\ InData,\ EOnlineDataAdvertisementType::Type\ InAdvertisementType)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}(Forward<Type>(InData))}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}}(InAdvertisementType)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}}(INVALID\_SESSION\_SETTING\_ID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00054}\mbox{\hyperlink{struct_f_online_session_setting_a7b72c77ec601684dc0eecb935678910e}{00054}}\ \ \ \ \ \mbox{\hyperlink{struct_f_online_session_setting_a7b72c77ec601684dc0eecb935678910e}{FOnlineSessionSetting}}(Type\&\&\ InData,\ EOnlineDataAdvertisementType::Type\ InAdvertisementType,\ int32\ InID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}(Forward<Type>(InData))}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}}(InAdvertisementType)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}}(InID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00064}\mbox{\hyperlink{struct_f_online_session_setting_ad460d00e78e056e6601799a81340c4b5}{00064}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_f_online_session_setting_ad460d00e78e056e6601799a81340c4b5}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_f_online_session_setting}{FOnlineSessionSetting}}\&\ Other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00065}00065\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Advertisement\ type\ not\ compared\ because\ it\ is\ not\ passed\ to\ clients}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}\ ==\ Other.\mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_f_online_session_setting}{FOnlineSessionSetting}}\&\ Other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00071}00071\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{struct_f_online_session_setting_ad460d00e78e056e6601799a81340c4b5}{operator==}}(Other);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00075}00075\ \ \ \ \ FString\ ToString()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00076}00076\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}}\ ==\ INVALID\_SESSION\_SETTING\_ID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ FString::Printf(TEXT(\textcolor{stringliteral}{"{}\%s\ :\ \%s"{}}),\ *\mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}.ToString(),\ EOnlineDataAdvertisementType::ToString(\mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}}));}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ FString::Printf(TEXT(\textcolor{stringliteral}{"{}\%s\ :\ \%s\ :\ \%d"{}}),\ *\mbox{\hyperlink{struct_f_online_session_setting_a60c00cf6e73982c49766093ea674878d}{Data}}.ToString(),\ EOnlineDataAdvertisementType::ToString(\mbox{\hyperlink{struct_f_online_session_setting_ad446a35d686ba1c6b538f6971b3a20d9}{AdvertisementType}}),\ \mbox{\hyperlink{struct_f_online_session_setting_ad7276b8c6b3e6a085fd0891a9d722ec8}{ID}});}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00086}00086\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00089}00089\ \textcolor{keyword}{typedef}\ FOnlineKeyValuePairs<FName,\ FOnlineSessionSetting>\ FSessionSettings;}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00095}\mbox{\hyperlink{class_f_online_session_search_param}{00095}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_online_session_search_param}{FOnlineSessionSearchParam}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00097}00097\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_param}{FOnlineSessionSearchParam}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00101}00101\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00103}\mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{00103}}\ \ \ \ \ FVariantData\ \mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00105}\mbox{\hyperlink{class_f_online_session_search_param_a35f2ed30aeb070345c8d2d5d38ca28b0}{00105}}\ \ \ \ \ EOnlineComparisonOp::Type\ \mbox{\hyperlink{class_f_online_session_search_param_a35f2ed30aeb070345c8d2d5d38ca28b0}{ComparisonOp}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00107}\mbox{\hyperlink{class_f_online_session_search_param_ae66db0b6f9d04669fa9129c1000dbe1a}{00107}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_search_param_ae66db0b6f9d04669fa9129c1000dbe1a}{ID}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00109}00109\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00111}00111\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00112}\mbox{\hyperlink{class_f_online_session_search_param_acf5194341164aaa7667231ba0c5d51b9}{00112}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_param_acf5194341164aaa7667231ba0c5d51b9}{FOnlineSessionSearchParam}}(Type\&\&\ InData)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00113}00113\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}}(Forward<Type>(InData))}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00114}00114\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_param_a35f2ed30aeb070345c8d2d5d38ca28b0}{ComparisonOp}}(EOnlineComparisonOp::Equals)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00115}00115\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_param_ae66db0b6f9d04669fa9129c1000dbe1a}{ID}}(INVALID\_SESSION\_SETTING\_ID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00116}00116\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00120}00120\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00121}\mbox{\hyperlink{class_f_online_session_search_param_abbc9397eed2f161d10282529babf9416}{00121}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_param_abbc9397eed2f161d10282529babf9416}{FOnlineSessionSearchParam}}(Type\&\&\ InData,\ EOnlineComparisonOp::Type\ InComparisonOp)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00122}00122\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}}(Forward<Type>(InData))}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00123}00123\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_param_a35f2ed30aeb070345c8d2d5d38ca28b0}{ComparisonOp}}(InComparisonOp)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_param_ae66db0b6f9d04669fa9129c1000dbe1a}{ID}}(INVALID\_SESSION\_SETTING\_ID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00125}00125\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00129}00129\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00130}\mbox{\hyperlink{class_f_online_session_search_param_a9c9580a4c82e34075c3935c240b8979e}{00130}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_param_a9c9580a4c82e34075c3935c240b8979e}{FOnlineSessionSearchParam}}(Type\&\&\ InData,\ EOnlineComparisonOp::Type\ InComparisonOp,\ int32\ InID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00131}00131\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}}(Forward<Type>(InData))}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00132}00132\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_param_a35f2ed30aeb070345c8d2d5d38ca28b0}{ComparisonOp}}(InComparisonOp)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00133}00133\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_param_ae66db0b6f9d04669fa9129c1000dbe1a}{ID}}(InID)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00134}00134\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00140}\mbox{\hyperlink{class_f_online_session_search_param_a24467246885ba0cddae319d6e10e676b}{00140}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_search_param_a24467246885ba0cddae319d6e10e676b}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_search_param}{FOnlineSessionSearchParam}}\&\ Other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00141}00141\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Don't\ compare\ ComparisonOp\ so\ we\ don't\ get\ the\ same\ data\ with\ different\ ops}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}}\ ==\ Other.\mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_search_param}{FOnlineSessionSearchParam}}\&\ Other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00147}00147\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{class_f_online_session_search_param_a24467246885ba0cddae319d6e10e676b}{operator==}}(Other);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00151}00151\ \ \ \ \ FString\ ToString()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00152}00152\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ FString::Printf(TEXT(\textcolor{stringliteral}{"{}Value=\%s\ :\ \%s\ :\ \%d"{}}),\ *\mbox{\hyperlink{class_f_online_session_search_param_a86cbb9be6d95e46dd021ed8871e94dbd}{Data}}.ToString(),\ EOnlineComparisonOp::ToString(\mbox{\hyperlink{class_f_online_session_search_param_a35f2ed30aeb070345c8d2d5d38ca28b0}{ComparisonOp}}),\ \mbox{\hyperlink{class_f_online_session_search_param_ae66db0b6f9d04669fa9129c1000dbe1a}{ID}});}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00155}00155\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00158}00158\ \textcolor{keyword}{typedef}\ FOnlineKeyValuePairs<FName,\ FOnlineSessionSearchParam>\ FSearchParams;}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00163}\mbox{\hyperlink{class_f_online_search_settings}{00163}}\ \textcolor{keyword}{class\ }ONLINESUBSYSTEM\_API\ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00164}00164\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00165}00165\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00167}\mbox{\hyperlink{class_f_online_search_settings_a7847bd07bbc669bbfcb148f3a3f7630a}{00167}}\ \ \ \ \ FSearchParams\ \mbox{\hyperlink{class_f_online_search_settings_a7847bd07bbc669bbfcb148f3a3f7630a}{SearchParams}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00169}00169\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00170}00170\ \ \ \ \ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00172}00172\ \ \ \ \ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}(\mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00173}00173\ \ \ \ \ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00174}00174\ \ \ \ \ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\&\ operator=(\mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00177}00177\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_f_online_search_settings}{\string~FOnlineSearchSettings}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00187}00187\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00188}\mbox{\hyperlink{class_f_online_search_settings_ac1a5d028c344a41fc539b21e0de112b2}{00188}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_online_search_settings_ac1a5d028c344a41fc539b21e0de112b2}{Set}}(FName\ Key,\ \textcolor{keyword}{const}\ ValueType\&\ Value,\ EOnlineComparisonOp::Type\ InType,\ int32\ ID);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00197}00197\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00198}\mbox{\hyperlink{class_f_online_search_settings_a49e216530fe6254772fd101ca232f1af}{00198}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_online_search_settings_a49e216530fe6254772fd101ca232f1af}{Set}}(FName\ Key,\ \textcolor{keyword}{const}\ ValueType\&\ Value,\ EOnlineComparisonOp::Type\ InType);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00208}00208\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00209}\mbox{\hyperlink{class_f_online_search_settings_a5a7ff4bf5ce779880091d845381f0e4f}{00209}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_search_settings_a5a7ff4bf5ce779880091d845381f0e4f}{Get}}(FName\ Key,\ ValueType\&\ Value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00218}\mbox{\hyperlink{class_f_online_search_settings_adbd2586593dbb2bafa4d9ba8da31d4e2}{00218}}\ \ \ \ \ EOnlineComparisonOp::Type\ \mbox{\hyperlink{class_f_online_search_settings_adbd2586593dbb2bafa4d9ba8da31d4e2}{GetComparisonOp}}(FName\ Key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00219}00219\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00224}\mbox{\hyperlink{class_f_online_session_settings}{00224}}\ \textcolor{keyword}{class\ }ONLINESUBSYSTEM\_API\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00225}00225\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00226}00226\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00228}\mbox{\hyperlink{class_f_online_session_settings_a96f2a51db0806ee3d11d03488ff91a75}{00228}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_settings_a96f2a51db0806ee3d11d03488ff91a75}{NumPublicConnections}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00230}\mbox{\hyperlink{class_f_online_session_settings_a97d6b8173931965fc8cc6c6adb6361b2}{00230}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_settings_a97d6b8173931965fc8cc6c6adb6361b2}{NumPrivateConnections}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00232}\mbox{\hyperlink{class_f_online_session_settings_a2fd78f31da55628247b3d2271f73839e}{00232}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a2fd78f31da55628247b3d2271f73839e}{bShouldAdvertise}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00234}\mbox{\hyperlink{class_f_online_session_settings_a918beae2c5e8f2c325ae4a1679935640}{00234}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a918beae2c5e8f2c325ae4a1679935640}{bAllowJoinInProgress}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00236}\mbox{\hyperlink{class_f_online_session_settings_a3c5734aa5c24fce41eabb0c72cc764cf}{00236}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a3c5734aa5c24fce41eabb0c72cc764cf}{bIsLANMatch}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00238}\mbox{\hyperlink{class_f_online_session_settings_a8c154ef66416f37d7a80e7245422bd28}{00238}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a8c154ef66416f37d7a80e7245422bd28}{bIsDedicated}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00240}\mbox{\hyperlink{class_f_online_session_settings_a10bb737b0162f69bf110edaa38793a21}{00240}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a10bb737b0162f69bf110edaa38793a21}{bUsesStats}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00242}\mbox{\hyperlink{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3}{00242}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3}{bAllowInvites}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00244}\mbox{\hyperlink{class_f_online_session_settings_ae54dab72798f1fa77b7c9ac527cf0128}{00244}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_ae54dab72798f1fa77b7c9ac527cf0128}{bUsesPresence}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00246}\mbox{\hyperlink{class_f_online_session_settings_a802a6a3d132686d4056a0c548d4990b4}{00246}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a802a6a3d132686d4056a0c548d4990b4}{bAllowJoinViaPresence}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00248}\mbox{\hyperlink{class_f_online_session_settings_a52b684c9b8cd5ffb6ec046df83d78db6}{00248}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a52b684c9b8cd5ffb6ec046df83d78db6}{bAllowJoinViaPresenceFriendsOnly}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00250}\mbox{\hyperlink{class_f_online_session_settings_a0d320da5065821511a2e6aa53489b00e}{00250}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a0d320da5065821511a2e6aa53489b00e}{bAntiCheatProtected}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00252}\mbox{\hyperlink{class_f_online_session_settings_a3819d6617edd0d04872262299b103a45}{00252}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a3819d6617edd0d04872262299b103a45}{bUseLobbiesIfAvailable}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00254}\mbox{\hyperlink{class_f_online_session_settings_a46de3b5d1cb363c75e304e014b04056a}{00254}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a46de3b5d1cb363c75e304e014b04056a}{bUseLobbiesVoiceChatIfAvailable}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00256}\mbox{\hyperlink{class_f_online_session_settings_aeb926e2e99bdb436017924196b0613f3}{00256}}\ \ \ \ \ FString\ \mbox{\hyperlink{class_f_online_session_settings_aeb926e2e99bdb436017924196b0613f3}{SessionIdOverride}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00259}\mbox{\hyperlink{class_f_online_session_settings_a25f0902a71554a0642ffbd242ddc6a0f}{00259}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_settings_a25f0902a71554a0642ffbd242ddc6a0f}{BuildUniqueId}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00261}\mbox{\hyperlink{class_f_online_session_settings_ae5102bba34f6e3dd9a43ed1865c96169}{00261}}\ \ \ \ \ FSessionSettings\ \mbox{\hyperlink{class_f_online_session_settings_ae5102bba34f6e3dd9a43ed1865c96169}{Settings}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00264}\mbox{\hyperlink{class_f_online_session_settings_a8e5b68e5c6c11e43b93d11fdf06f9eac}{00264}}\ \ \ \ \ TUniqueNetIdMap<FSessionSettings>\ \mbox{\hyperlink{class_f_online_session_settings_a8e5b68e5c6c11e43b93d11fdf06f9eac}{MemberSettings}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00266}00266\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00268}\mbox{\hyperlink{class_f_online_session_settings_a561d4e37c06d9a432912990a237ce585}{00268}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_settings_a561d4e37c06d9a432912990a237ce585}{FOnlineSessionSettings}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00269}00269\ \ \ \ \ \ \ \ \ :\ NumPublicConnections(0)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00270}00270\ \ \ \ \ \ \ \ \ ,\ NumPrivateConnections(0)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00271}00271\ \ \ \ \ \ \ \ \ ,\ bShouldAdvertise(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00272}00272\ \ \ \ \ \ \ \ \ ,\ bAllowJoinInProgress(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00273}00273\ \ \ \ \ \ \ \ \ ,\ bIsLANMatch(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00274}00274\ \ \ \ \ \ \ \ \ ,\ bIsDedicated(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00275}00275\ \ \ \ \ \ \ \ \ ,\ bUsesStats(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00276}00276\ \ \ \ \ \ \ \ \ ,\ bAllowInvites(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00277}00277\ \ \ \ \ \ \ \ \ ,\ bUsesPresence(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00278}00278\ \ \ \ \ \ \ \ \ ,\ bAllowJoinViaPresence(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00279}00279\ \ \ \ \ \ \ \ \ ,\ bAllowJoinViaPresenceFriendsOnly(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00280}00280\ \ \ \ \ \ \ \ \ ,\ bAntiCheatProtected(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00281}00281\ \ \ \ \ \ \ \ \ ,\ bUseLobbiesIfAvailable(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00282}00282\ \ \ \ \ \ \ \ \ ,\ bUseLobbiesVoiceChatIfAvailable(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00283}00283\ \ \ \ \ \ \ \ \ ,\ BuildUniqueId(GetBuildUniqueId())}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00284}00284\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00285}00285\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Example\ usage\ of\ settings}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00286}00286\ \textcolor{comment}{//\ \ \ \ \ \ Set(SETTING\_MAPNAME,\ FString(TEXT("{}"{})),\ EOnlineDataAdvertisementType::ViaOnlineService);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00287}00287\ \textcolor{comment}{//\ \ \ \ \ \ Set(SETTING\_NUMBOTS,\ 0,\ EOnlineDataAdvertisementType::ViaOnlineService);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00288}00288\ \textcolor{comment}{//\ \ \ \ \ \ Set(SETTING\_GAMEMODE,\ FString(TEXT("{}"{})),\ EOnlineDataAdvertisementType::ViaOnlineService);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00289}00289\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00291}00291\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_f_online_session_settings}{\string~FOnlineSessionSettings}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00292}00292\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00293}00293\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00295}00295\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}(\mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00296}00296\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00297}00297\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\ operator=(\mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00298}00298\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00308}00308\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00309}\mbox{\hyperlink{class_f_online_session_settings_ad7cbd671743f0ed15b3e507abc87045d}{00309}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_online_session_settings_ad7cbd671743f0ed15b3e507abc87045d}{Set}}(FName\ Key,\ \textcolor{keyword}{const}\ ValueType\&\ Value,\ EOnlineDataAdvertisementType::Type\ InType,\ int32\ InID);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00318}00318\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00319}\mbox{\hyperlink{class_f_online_session_settings_aaa4e3ee04994688938e324832548de15}{00319}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_online_session_settings_aaa4e3ee04994688938e324832548de15}{Set}}(FName\ Key,\ \textcolor{keyword}{const}\ ValueType\&\ Value,\ EOnlineDataAdvertisementType::Type\ InType);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00328}\mbox{\hyperlink{class_f_online_session_settings_a31a96f80b176b0c6073901b002f67101}{00328}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_online_session_settings_a31a96f80b176b0c6073901b002f67101}{Set}}(FName\ Key,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_f_online_session_setting}{FOnlineSessionSetting}}\&\ SrcSetting);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00338}00338\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ValueType>}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00339}\mbox{\hyperlink{class_f_online_session_settings_a3eb136d0e3c9358e0917b0b4dc86033a}{00339}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a3eb136d0e3c9358e0917b0b4dc86033a}{Get}}(FName\ Key,\ ValueType\&\ Value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00348}\mbox{\hyperlink{class_f_online_session_settings_a3b3b3b8f510ba7105716108744dcc4a3}{00348}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_settings_a3b3b3b8f510ba7105716108744dcc4a3}{Remove}}(FName\ Key);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00357}\mbox{\hyperlink{class_f_online_session_settings_ad8bcb8c640cefe8f54094cf950a9805d}{00357}}\ \ \ \ \ EOnlineDataAdvertisementType::Type\ \mbox{\hyperlink{class_f_online_session_settings_ad8bcb8c640cefe8f54094cf950a9805d}{GetAdvertisementType}}(FName\ Key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00366}\mbox{\hyperlink{class_f_online_session_settings_a006b0e0b22d66ce3b0cebb5b7c4f4928}{00366}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_settings_a006b0e0b22d66ce3b0cebb5b7c4f4928}{GetID}}(FName\ Key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00367}00367\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00368}00368\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00369}00369\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00371}\mbox{\hyperlink{class_f_online_session}{00371}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_online_session}{FOnlineSession}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00372}00372\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00373}00373\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00375}\mbox{\hyperlink{class_f_online_session_adecba81a6c17f84980f1e0f68a16b448}{00375}}\ \ \ \ \ FUniqueNetIdPtr\ \mbox{\hyperlink{class_f_online_session_adecba81a6c17f84980f1e0f68a16b448}{OwningUserId}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00377}\mbox{\hyperlink{class_f_online_session_a621ab90971cdafc8838083491cb5f5bb}{00377}}\ \ \ \ \ FString\ \mbox{\hyperlink{class_f_online_session_a621ab90971cdafc8838083491cb5f5bb}{OwningUserName}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00379}\mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{00379}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00381}\mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{00381}}\ \ \ \ \ TSharedPtr<class\ FOnlineSessionInfo>\ \mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00383}\mbox{\hyperlink{class_f_online_session_ad28ecc1251facd18681cbc22bcb05f04}{00383}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_ad28ecc1251facd18681cbc22bcb05f04}{NumOpenPrivateConnections}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00385}\mbox{\hyperlink{class_f_online_session_ad9d046916bcf1ff87de7782c494b5b09}{00385}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_ad9d046916bcf1ff87de7782c494b5b09}{NumOpenPublicConnections}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00386}00386\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00387}00387\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00389}\mbox{\hyperlink{class_f_online_session_ace610b312a1e202f2f6e51d59cd96d81}{00389}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ace610b312a1e202f2f6e51d59cd96d81}{FOnlineSession}}()\ :}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00390}00390\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_adecba81a6c17f84980f1e0f68a16b448}{OwningUserId}}(nullptr),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00391}00391\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}(nullptr),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00392}00392\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ad28ecc1251facd18681cbc22bcb05f04}{NumOpenPrivateConnections}}(0),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00393}00393\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ad9d046916bcf1ff87de7782c494b5b09}{NumOpenPublicConnections}}(0)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00394}00394\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00395}00395\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00398}\mbox{\hyperlink{class_f_online_session_a6c1a2cf1d08b77bfed4e4c35da1c1f53}{00398}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_a6c1a2cf1d08b77bfed4e4c35da1c1f53}{FOnlineSession}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\ InSessionSettings)\ :}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00399}00399\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_adecba81a6c17f84980f1e0f68a16b448}{OwningUserId}}(nullptr),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00400}00400\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}(InSessionSettings),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00401}00401\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}(nullptr),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00402}00402\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ad28ecc1251facd18681cbc22bcb05f04}{NumOpenPrivateConnections}}(0),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00403}00403\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ad9d046916bcf1ff87de7782c494b5b09}{NumOpenPublicConnections}}(0)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00404}00404\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00405}00405\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00406}00406\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00407}00407\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ace610b312a1e202f2f6e51d59cd96d81}{FOnlineSession}}(\mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00408}00408\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_ace610b312a1e202f2f6e51d59cd96d81}{FOnlineSession}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00409}00409\ \ \ \ \ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&\ operator=(\mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00410}00410\ \ \ \ \ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00411}00411\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00412}00412\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_f_online_session}{\string~FOnlineSession}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00413}00413\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00415}\mbox{\hyperlink{class_f_online_session_aa3cd05f1f28f24285da464dab45ef695}{00415}}\ \ \ \ \ FString\ \mbox{\hyperlink{class_f_online_session_aa3cd05f1f28f24285da464dab45ef695}{GetSessionIdStr}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00416}00416\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00417}00417\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}.IsValid()\ \&\&\ \mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}-\/>IsValid())}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00418}00418\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}-\/>GetSessionId().ToString();}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00420}00420\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00421}00421\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00422}00422\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TEXT(\textcolor{stringliteral}{"{}InvalidSession"{}});}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00423}00423\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00424}00424\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00425}00425\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00427}\mbox{\hyperlink{class_f_named_online_session}{00427}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00428}00428\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00429}00429\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00430}00430\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}()\ :}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00431}00431\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session_a3880be1c9c306b34a1c0e7ed194ab717}{SessionName}}(NAME\_None),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00432}00432\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session_ac64a4dc14f2754020b9aecf76b089386}{HostingPlayerNum}}(INDEX\_NONE),}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00433}00433\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}(EOnlineSessionState::NoSession)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00434}00434\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00435}00435\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00437}00437\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00439}\mbox{\hyperlink{class_f_named_online_session_a3880be1c9c306b34a1c0e7ed194ab717}{00439}}\ \ \ \ \ \textcolor{keyword}{const}\ FName\ \mbox{\hyperlink{class_f_named_online_session_a3880be1c9c306b34a1c0e7ed194ab717}{SessionName}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00441}\mbox{\hyperlink{class_f_named_online_session_ac64a4dc14f2754020b9aecf76b089386}{00441}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_named_online_session_ac64a4dc14f2754020b9aecf76b089386}{HostingPlayerNum}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00443}\mbox{\hyperlink{class_f_named_online_session_aafd42181e2938518819228be75e0d331}{00443}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_named_online_session_aafd42181e2938518819228be75e0d331}{bHosting}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00444}00444\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00446}\mbox{\hyperlink{class_f_named_online_session_ad03001e7e3c166d3503fe23bdcb8c610}{00446}}\ \ \ \ \ FUniqueNetIdPtr\ \mbox{\hyperlink{class_f_named_online_session_ad03001e7e3c166d3503fe23bdcb8c610}{LocalOwnerId}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00447}00447\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00449}\mbox{\hyperlink{class_f_named_online_session_ac0b6a15a748db2819804fa0e3f72f708}{00449}}\ \ \ \ \ TArray<\ FUniqueNetIdRef\ >\ \mbox{\hyperlink{class_f_named_online_session_ac0b6a15a748db2819804fa0e3f72f708}{RegisteredPlayers}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00451}\mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{00451}}\ \ \ \ \ EOnlineSessionState::Type\ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00452}00452\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00454}\mbox{\hyperlink{class_f_named_online_session_a3ab3a5d083454f61d2a211c8110fc8cf}{00454}}\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session_a3ab3a5d083454f61d2a211c8110fc8cf}{FNamedOnlineSession}}(FName\ InSessionName,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}\&\ InSessionSettings)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00455}00455\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}(InSessionSettings)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00456}00456\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_a3880be1c9c306b34a1c0e7ed194ab717}{SessionName}}(InSessionName)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00457}00457\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_ac64a4dc14f2754020b9aecf76b089386}{HostingPlayerNum}}(INDEX\_NONE)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00458}00458\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_aafd42181e2938518819228be75e0d331}{bHosting}}(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00459}00459\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}(EOnlineSessionState::NoSession)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00460}00460\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00461}00461\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00462}00462\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00464}\mbox{\hyperlink{class_f_named_online_session_a0bf639b02181700127afce69138a8686}{00464}}\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session_a0bf639b02181700127afce69138a8686}{FNamedOnlineSession}}(FName\ InSessionName,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\&\ Session)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00465}00465\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}(Session)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00466}00466\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_a3880be1c9c306b34a1c0e7ed194ab717}{SessionName}}(InSessionName)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00467}00467\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_ac64a4dc14f2754020b9aecf76b089386}{HostingPlayerNum}}(INDEX\_NONE)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00468}00468\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_aafd42181e2938518819228be75e0d331}{bHosting}}(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00469}00469\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}(EOnlineSessionState::NoSession)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00470}00470\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00471}00471\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00472}00472\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00473}00473\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_f_named_online_session}{\string~FNamedOnlineSession}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00474}00474\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00475}00475\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00476}00476\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00477}00477\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\&\ Other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00478}00478\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}(\mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\&\&\ Other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00479}00479\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00480}00480\ \ \ \ \ \textcolor{comment}{//\ We\ delete\ the\ equals\ operator\ as\ SessionName\ is\ immutable}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00481}00481\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\&\ Other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00482}00482\ \ \ \ \ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\&\ operator=(\mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}\&\&\ Other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00483}00483\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00495}\mbox{\hyperlink{class_f_named_online_session_acd088ccac40f1e31efc211b3c2bb7fac}{00495}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_named_online_session_acd088ccac40f1e31efc211b3c2bb7fac}{GetJoinability}}(\textcolor{keywordtype}{bool}\&\ bPublicJoinable,\ \textcolor{keywordtype}{bool}\&\ bFriendJoinable,\ \textcolor{keywordtype}{bool}\&\ bInviteOnly,\ \textcolor{keywordtype}{bool}\&\ bAllowInvites)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00496}00496\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00497}00497\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ states\ that\ have\ a\ valid\ session\ are\ considered}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00498}00498\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}\ !=\ EOnlineSessionState::NoSession\ \&\&\ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}\ !=\ EOnlineSessionState::Creating\ \&\&\ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}\ !=\ EOnlineSessionState::Destroying)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00499}00499\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00500}00500\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bAllowJIP\ =\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}.\mbox{\hyperlink{class_f_online_session_settings_a918beae2c5e8f2c325ae4a1679935640}{bAllowJoinInProgress}}\ ||\ (\mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}\ !=\ EOnlineSessionState::Starting\ \&\&\ \mbox{\hyperlink{class_f_named_online_session_a31eb418a1083afe794298d5a65e08647}{SessionState}}\ !=\ EOnlineSessionState::InProgress);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bAllowJIP)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00502}00502\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00503}00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bPublicJoinable\ =\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}.\mbox{\hyperlink{class_f_online_session_settings_a2fd78f31da55628247b3d2271f73839e}{bShouldAdvertise}}\ ||\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}.\mbox{\hyperlink{class_f_online_session_settings_a802a6a3d132686d4056a0c548d4990b4}{bAllowJoinViaPresence}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00504}00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bFriendJoinable\ =\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}.\mbox{\hyperlink{class_f_online_session_settings_a52b684c9b8cd5ffb6ec046df83d78db6}{bAllowJoinViaPresenceFriendsOnly}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bInviteOnly\ =\ !bPublicJoinable\ \&\&\ !bFriendJoinable\ \&\&\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}.\mbox{\hyperlink{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3}{bAllowInvites}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bAllowInvites\ =\ \mbox{\hyperlink{class_f_online_session_aab47aceeac11003d398e4fe4e305d05e}{SessionSettings}}.\mbox{\hyperlink{class_f_online_session_settings_a565ccb5ea785791cd30fa3c54e8fe2a3}{bAllowInvites}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00507}00507\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00508}00508\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00509}00509\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00510}00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bPublicJoinable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bFriendJoinable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00512}00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bInviteOnly\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00513}00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bAllowInvites\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00514}00514\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00515}00515\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valid\ session,\ joinable\ or\ otherwise}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00518}00518\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00519}00519\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00520}00520\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invalid\ session}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00521}00521\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00522}00522\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00523}00523\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00524}00524\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00525}00525\ \textcolor{keyword}{using\ }FNamedOnlineSessionPtr\ =\ TSharedPtr<FNamedOnlineSession,\ ESPMode::ThreadSafe>;}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00526}00526\ \textcolor{keyword}{using\ }FNamedOnlineSessionRef\ =\ TSharedRef<FNamedOnlineSession,\ ESPMode::ThreadSafe>;}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00527}00527\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00529}00529\ \textcolor{preprocessor}{\#define\ MAX\_QUERY\_PING\ 9999}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00532}\mbox{\hyperlink{class_f_online_session_search_result}{00532}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_online_session_search_result}{FOnlineSessionSearchResult}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00533}00533\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00534}00534\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00536}\mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{00536}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}\ \mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{Session}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00538}\mbox{\hyperlink{class_f_online_session_search_result_ad6b62f71bd12a68e58cd4e34940fe6a8}{00538}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_search_result_ad6b62f71bd12a68e58cd4e34940fe6a8}{PingInMs}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00539}00539\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00540}00540\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_result}{FOnlineSessionSearchResult}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00541}00541\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session_search_result_ad6b62f71bd12a68e58cd4e34940fe6a8}{PingInMs}}(MAX\_QUERY\_PING)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00542}00542\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00543}00543\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00544}00544\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00548}\mbox{\hyperlink{class_f_online_session_search_result_a2fc2702aa274269590cba0636b5ae3d6}{00548}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_search_result_a2fc2702aa274269590cba0636b5ae3d6}{IsValid}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00549}00549\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00550}00550\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{Session}}.\mbox{\hyperlink{class_f_online_session_adecba81a6c17f84980f1e0f68a16b448}{OwningUserId}}.IsValid()\ \&\&\ \mbox{\hyperlink{class_f_online_session_search_result_a506b9128f6aa94bf14cd835c8d89e3dd}{IsSessionInfoValid}}());}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00551}00551\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00552}00552\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00557}\mbox{\hyperlink{class_f_online_session_search_result_a506b9128f6aa94bf14cd835c8d89e3dd}{00557}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_search_result_a506b9128f6aa94bf14cd835c8d89e3dd}{IsSessionInfoValid}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00558}00558\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00559}00559\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{Session}}.\mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}.IsValid()\ \&\&\ \mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{Session}}.\mbox{\hyperlink{class_f_online_session_a947e5ee2e03c52af6451c9b94afd962a}{SessionInfo}}-\/>IsValid());}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00560}00560\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00561}00561\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00563}\mbox{\hyperlink{class_f_online_session_search_result_a9c90ee7aeccab91febb8bb713f876b3b}{00563}}\ \ \ \ \ FString\ \mbox{\hyperlink{class_f_online_session_search_result_a9c90ee7aeccab91febb8bb713f876b3b}{GetSessionIdStr}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00564}00564\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00565}00565\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{Session}}.\mbox{\hyperlink{class_f_online_session_aa3cd05f1f28f24285da464dab45ef695}{GetSessionIdStr}}();}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00566}00566\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00567}00567\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00568}00568\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00575}\mbox{\hyperlink{class_f_online_session_search}{00575}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00576}00576\ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00577}00577\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00579}\mbox{\hyperlink{class_f_online_session_search_ab8abb57a7022012021f656c540840fdf}{00579}}\ \ \ \ \ TArray<FOnlineSessionSearchResult>\ \mbox{\hyperlink{class_f_online_session_search_ab8abb57a7022012021f656c540840fdf}{SearchResults}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00581}\mbox{\hyperlink{class_f_online_session_search_a4a2f7520b2c08f2eaae62a5366c6f777}{00581}}\ \ \ \ \ EOnlineAsyncTaskState::Type\ \mbox{\hyperlink{class_f_online_session_search_a4a2f7520b2c08f2eaae62a5366c6f777}{SearchState}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00583}\mbox{\hyperlink{class_f_online_session_search_a64df556cae1bd9145c8e10f4df81855b}{00583}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_search_a64df556cae1bd9145c8e10f4df81855b}{MaxSearchResults}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00585}\mbox{\hyperlink{class_f_online_session_search_aaa22089e40d18a305266a5c3c4e81a6f}{00585}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_search_settings}{FOnlineSearchSettings}}\ \mbox{\hyperlink{class_f_online_session_search_aaa22089e40d18a305266a5c3c4e81a6f}{QuerySettings}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00587}\mbox{\hyperlink{class_f_online_session_search_a76e3b6d16c00da7c6466e11c7002187e}{00587}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_f_online_session_search_a76e3b6d16c00da7c6466e11c7002187e}{bIsLanQuery}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00592}\mbox{\hyperlink{class_f_online_session_search_ab2ebd6f8bafdbef970b9a177360b5d0b}{00592}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_search_ab2ebd6f8bafdbef970b9a177360b5d0b}{PingBucketSize}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00594}\mbox{\hyperlink{class_f_online_session_search_a24d5c8d0b1772486d2cb612f88179581}{00594}}\ \ \ \ \ int32\ \mbox{\hyperlink{class_f_online_session_search_a24d5c8d0b1772486d2cb612f88179581}{PlatformHash}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00596}\mbox{\hyperlink{class_f_online_session_search_a7ba11c64888b805813934d053faa1c95}{00596}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_f_online_session_search_a7ba11c64888b805813934d053faa1c95}{TimeoutInSeconds}};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00597}00597\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00598}00598\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00600}\mbox{\hyperlink{class_f_online_session_search_a3c048db975e2624b6c136dbdf72ad666}{00600}}\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_a3c048db975e2624b6c136dbdf72ad666}{FOnlineSessionSearch}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00601}00601\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_f_online_session_search_a4a2f7520b2c08f2eaae62a5366c6f777}{SearchState}}(EOnlineAsyncTaskState::NotStarted)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00602}00602\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_a64df556cae1bd9145c8e10f4df81855b}{MaxSearchResults}}(1)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00603}00603\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_a76e3b6d16c00da7c6466e11c7002187e}{bIsLanQuery}}(false)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00604}00604\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_ab2ebd6f8bafdbef970b9a177360b5d0b}{PingBucketSize}}(0)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00605}00605\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_a24d5c8d0b1772486d2cb612f88179581}{PlatformHash}}(0)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00606}00606\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_f_online_session_search_a7ba11c64888b805813934d053faa1c95}{TimeoutInSeconds}}(0.0f)}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00607}00607\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00608}00608\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Examples\ of\ setting\ search\ parameters}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00609}00609\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ QuerySettings.Set(SETTING\_MAPNAME,\ FString(),\ EOnlineComparisonOp::Equals);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00610}00610\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ QuerySettings.Set(SEARCH\_DEDICATED\_ONLY,\ false,\ EOnlineComparisonOp::Equals);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00611}00611\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ QuerySettings.Set(SEARCH\_EMPTY\_SERVERS\_ONLY,\ false,\ EOnlineComparisonOp::Equals);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00612}00612\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ QuerySettings.Set(SEARCH\_SECURE\_SERVERS\_ONLY,\ false,\ EOnlineComparisonOp::Equals);}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00613}00613\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00614}00614\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00615}00615\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_f_online_session_search}{\string~FOnlineSessionSearch}}()}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00616}00616\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00617}00617\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00618}00618\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00619}00619\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_a3c048db975e2624b6c136dbdf72ad666}{FOnlineSessionSearch}}(\mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00620}00620\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search_a3c048db975e2624b6c136dbdf72ad666}{FOnlineSessionSearch}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00621}00621\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}\&\ operator=(\mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00622}00622\ \ \ \ \ \mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_search}{FOnlineSessionSearch}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00623}00623\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00627}\mbox{\hyperlink{class_f_online_session_search_a8e75e79394d1e2c6058004d866e989cf}{00627}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_online_session_search_a8e75e79394d1e2c6058004d866e989cf}{SortSearchResults}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00628}00628\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00634}\mbox{\hyperlink{class_f_online_session_search_a5ce986e87be490d338a736c4679e0501}{00634}}\ \ \ \ \ \textcolor{keyword}{virtual}\ TSharedPtr<FOnlineSessionSettings>\ \mbox{\hyperlink{class_f_online_session_search_a5ce986e87be490d338a736c4679e0501}{GetDefaultSessionSettings}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00635}00635\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00636}00636\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ MakeShared<FOnlineSessionSettings>();}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00637}00637\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00638}00638\ \};}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00639}00639\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00645}00645\ \textcolor{keywordtype}{void}\ ONLINESUBSYSTEM\_API\ DumpNamedSession(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_named_online_session}{FNamedOnlineSession}}*\ NamedSession);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00646}00646\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00652}00652\ \textcolor{keywordtype}{void}\ ONLINESUBSYSTEM\_API\ DumpSession(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session}{FOnlineSession}}*\ Session);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00653}00653\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00659}00659\ \textcolor{keywordtype}{void}\ ONLINESUBSYSTEM\_API\ DumpSessionSettings(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_f_online_session_settings}{FOnlineSessionSettings}}*\ SessionSettings);}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00660}00660\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00661}00661\ }
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00662}00662\ \textcolor{preprocessor}{\#if\ UE\_ENABLE\_INCLUDE\_ORDER\_DEPRECATED\_IN\_5\_2}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00663}00663\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00664}00664\ \textcolor{preprocessor}{\#include\ "{}Online/OnlineSessionNames.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00665}00665\ \textcolor{preprocessor}{\#include\ "{}OnlineSubsystemPackage.h"{}}}
+\DoxyCodeLine{\Hypertarget{_online_session_settings_8h_source_l00666}00666\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,112 @@
+\doxysection{FOnline\+Session\+Search\+Result Class Reference}
+\hypertarget{class_f_online_session_search_result}{}\label{class_f_online_session_search_result}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+
+
+{\ttfamily \#include $<$Online\+Session\+Settings.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_f_online_session_search_result_a2fc2702aa274269590cba0636b5ae3d6}{Is\+Valid}} () const
+\item 
+bool \mbox{\hyperlink{class_f_online_session_search_result_a506b9128f6aa94bf14cd835c8d89e3dd}{Is\+Session\+Info\+Valid}} () const
+\item 
+FString \mbox{\hyperlink{class_f_online_session_search_result_a9c90ee7aeccab91febb8bb713f876b3b}{Get\+Session\+Id\+Str}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_f_online_session}{FOnline\+Session}} \mbox{\hyperlink{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}{Session}}
+\item 
+int32 \mbox{\hyperlink{class_f_online_session_search_result_ad6b62f71bd12a68e58cd4e34940fe6a8}{Ping\+In\+Ms}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representation of a single search result from a Find\+Session() call 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00532}{532}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_online_session_search_result_a5172b1271106e63328c3bfd116c9ffb6}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\doxysubsubsection{\texorpdfstring{FOnlineSessionSearchResult()}{FOnlineSessionSearchResult()}}
+{\footnotesize\ttfamily \label{class_f_online_session_search_result_a5172b1271106e63328c3bfd116c9ffb6} 
+FOnline\+Session\+Search\+Result\+::\+FOnline\+Session\+Search\+Result (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00540}{540}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_online_session_search_result_a9c90ee7aeccab91febb8bb713f876b3b}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!GetSessionIdStr@{GetSessionIdStr}}
+\index{GetSessionIdStr@{GetSessionIdStr}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\doxysubsubsection{\texorpdfstring{GetSessionIdStr()}{GetSessionIdStr()}}
+{\footnotesize\ttfamily \label{class_f_online_session_search_result_a9c90ee7aeccab91febb8bb713f876b3b} 
+FString FOnline\+Session\+Search\+Result\+::\+Get\+Session\+Id\+Str (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the session id for a given session search result 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00563}{563}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_search_result_a506b9128f6aa94bf14cd835c8d89e3dd}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!IsSessionInfoValid@{IsSessionInfoValid}}
+\index{IsSessionInfoValid@{IsSessionInfoValid}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\doxysubsubsection{\texorpdfstring{IsSessionInfoValid()}{IsSessionInfoValid()}}
+{\footnotesize\ttfamily \label{class_f_online_session_search_result_a506b9128f6aa94bf14cd835c8d89e3dd} 
+bool FOnline\+Session\+Search\+Result\+::\+Is\+Session\+Info\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if the session info is valid, for cases where we don\textquotesingle{}t need the Owning\+User\+Id \begin{DoxyReturn}{Returns}
+true if the session info is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00557}{557}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_search_result_a2fc2702aa274269590cba0636b5ae3d6}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily \label{class_f_online_session_search_result_a2fc2702aa274269590cba0636b5ae3d6} 
+bool FOnline\+Session\+Search\+Result\+::\+Is\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the search result is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00548}{548}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_f_online_session_search_result_ad6b62f71bd12a68e58cd4e34940fe6a8}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!PingInMs@{PingInMs}}
+\index{PingInMs@{PingInMs}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\doxysubsubsection{\texorpdfstring{PingInMs}{PingInMs}}
+{\footnotesize\ttfamily \label{class_f_online_session_search_result_ad6b62f71bd12a68e58cd4e34940fe6a8} 
+int32 FOnline\+Session\+Search\+Result\+::\+Ping\+In\+Ms}
+
+Ping to the search result, MAX\+\_\+\+QUERY\+\_\+\+PING is unreachable 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00538}{538}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+\Hypertarget{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90}\index{FOnlineSessionSearchResult@{FOnlineSessionSearchResult}!Session@{Session}}
+\index{Session@{Session}!FOnlineSessionSearchResult@{FOnlineSessionSearchResult}}
+\doxysubsubsection{\texorpdfstring{Session}{Session}}
+{\footnotesize\ttfamily \label{class_f_online_session_search_result_a338aae3195dfa1c00b950509a8bc5d90} 
+\mbox{\hyperlink{class_f_online_session}{FOnline\+Session}} FOnline\+Session\+Search\+Result\+::\+Session}
+
+All advertised session information 
+
+Definition at line \mbox{\hyperlink{_online_session_settings_8h_source_l00536}{536}} of file \mbox{\hyperlink{_online_session_settings_8h_source}{Online\+Session\+Settings.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/Online\+Session\+Settings.\+h\end{DoxyCompactItemize}

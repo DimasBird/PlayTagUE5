@@ -1,0 +1,239 @@
+\doxysection{FEngine\+Loop Class Reference}
+\hypertarget{class_f_engine_loop}{}\label{class_f_engine_loop}\index{FEngineLoop@{FEngineLoop}}
+
+
+{\ttfamily \#include $<$Launch\+Engine\+Loop.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_f_engine_loop_a0e950e3a1c03d0a8cba1e2a1169dca7a}{FEngine\+Loop}} ()
+\item 
+int32 \mbox{\hyperlink{class_f_engine_loop_a518759c53ff8b6c486dec40d4736ae9c}{Pre\+Init}} (int32 ArgC, TCHAR \texorpdfstring{$\ast$}{*}ArgV\mbox{[}$\,$\mbox{]}, const TCHAR \texorpdfstring{$\ast$}{*}Additional\+Commandline=nullptr)
+\item 
+int32 \mbox{\hyperlink{class_f_engine_loop_a5a76f06523151c31745fa61930618501}{Pre\+Init}} (const TCHAR \texorpdfstring{$\ast$}{*}Cmd\+Line)
+\item 
+int32 \mbox{\hyperlink{class_f_engine_loop_a6ee54366854f9d9f85fa4c57ec56c7a4}{Pre\+Init\+Pre\+Startup\+Screen}} (const TCHAR \texorpdfstring{$\ast$}{*}Cmd\+Line)
+\item 
+int32 \mbox{\hyperlink{class_f_engine_loop_aebb4688844c5ecc6b09693c0a0312d83}{Pre\+Init\+Post\+Startup\+Screen}} (const TCHAR \texorpdfstring{$\ast$}{*}Cmd\+Line)
+\item 
+void \mbox{\hyperlink{class_f_engine_loop_a20007056d4f805e3bea2397082230fc3}{Load\+Pre\+Init\+Modules}} ()
+\item 
+bool \mbox{\hyperlink{class_f_engine_loop_a70b11bc4118d125ea03a511e9e4828fb}{Load\+Core\+Modules}} ()
+\item 
+void \mbox{\hyperlink{class_f_engine_loop_ae3548aa102fbbe22cc36a501258161db}{Cleanup\+Pre\+Init\+Context}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_f_engine_loop_ad48fae8708b97c1bd121d1ea76a1bad8}{Post\+Init\+RHI}} ()
+\item 
+static void \mbox{\hyperlink{class_f_engine_loop_ad60344a74fb5036521a89c8e7d71f5be}{Pre\+Init\+HMDDevice}} ()
+\item 
+static bool \mbox{\hyperlink{class_f_engine_loop_a4b8ff979ca8e058a32497f34a24a5e13}{App\+Init}} ()
+\item 
+static void \mbox{\hyperlink{class_f_engine_loop_a6fc4790383abd1c188c0b2217cbf6b6e}{App\+Pre\+Exit}} ()
+\item 
+static void \mbox{\hyperlink{class_f_engine_loop_a3b290b63af57d92737e3b789af1b08d3}{App\+Exit}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ float $>$ \mbox{\hyperlink{class_f_engine_loop_ab30256ba5e81e4976a7c0a0942745a0d}{Frame\+Times}}
+\item 
+double \mbox{\hyperlink{class_f_engine_loop_ab908b3d689e69e40d8db363782f5d2fb}{Total\+Tick\+Time}}
+\item 
+double \mbox{\hyperlink{class_f_engine_loop_af6caa55af89a07b9d2e970a01ac3e6b9}{Max\+Tick\+Time}}
+\item 
+uint64 \mbox{\hyperlink{class_f_engine_loop_aa84b807df1e7aa38880a34ba88d75df0}{Max\+Frame\+Counter}}
+\item 
+uint32 \mbox{\hyperlink{class_f_engine_loop_ad30ae3ed817713d35265e52fc16c3720}{Last\+Frame\+Cycles}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the main engine loop. ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00046}{46}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_engine_loop_a0e950e3a1c03d0a8cba1e2a1169dca7a}\index{FEngineLoop@{FEngineLoop}!FEngineLoop@{FEngineLoop}}
+\index{FEngineLoop@{FEngineLoop}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{FEngineLoop()}{FEngineLoop()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a0e950e3a1c03d0a8cba1e2a1169dca7a} 
+FEngine\+Loop\+::\+FEngine\+Loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Default constructor. \Hypertarget{class_f_engine_loop_a9b18e3648153fd84e7c312751e318227}\index{FEngineLoop@{FEngineLoop}!````~FEngineLoop@{\texorpdfstring{$\sim$}{\string~}FEngineLoop}}
+\index{````~FEngineLoop@{\texorpdfstring{$\sim$}{\string~}FEngineLoop}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FEngineLoop()}{\string~FEngineLoop()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a9b18e3648153fd84e7c312751e318227} 
+virtual FEngine\+Loop\+::\texorpdfstring{$\sim$}{\string~}\+FEngine\+Loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00056}{56}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_engine_loop_a3b290b63af57d92737e3b789af1b08d3}\index{FEngineLoop@{FEngineLoop}!AppExit@{AppExit}}
+\index{AppExit@{AppExit}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{AppExit()}{AppExit()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a3b290b63af57d92737e3b789af1b08d3} 
+static void FEngine\+Loop\+::\+App\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Shuts down the application.
+
+This function called outside guarded exit code, during all exits (including error exits). \Hypertarget{class_f_engine_loop_a4b8ff979ca8e058a32497f34a24a5e13}\index{FEngineLoop@{FEngineLoop}!AppInit@{AppInit}}
+\index{AppInit@{AppInit}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{AppInit()}{AppInit()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a4b8ff979ca8e058a32497f34a24a5e13} 
+static bool FEngine\+Loop\+::\+App\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes the application. \Hypertarget{class_f_engine_loop_a6fc4790383abd1c188c0b2217cbf6b6e}\index{FEngineLoop@{FEngineLoop}!AppPreExit@{AppPreExit}}
+\index{AppPreExit@{AppPreExit}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{AppPreExit()}{AppPreExit()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a6fc4790383abd1c188c0b2217cbf6b6e} 
+static void FEngine\+Loop\+::\+App\+Pre\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Prepares the application for shutdown.
+
+This function is called from within guarded exit code, only during non-\/error exits. \Hypertarget{class_f_engine_loop_ae3548aa102fbbe22cc36a501258161db}\index{FEngineLoop@{FEngineLoop}!CleanupPreInitContext@{CleanupPreInitContext}}
+\index{CleanupPreInitContext@{CleanupPreInitContext}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{CleanupPreInitContext()}{CleanupPreInitContext()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_ae3548aa102fbbe22cc36a501258161db} 
+void FEngine\+Loop\+::\+Cleanup\+Pre\+Init\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Clean up Pre\+Init context. \Hypertarget{class_f_engine_loop_a70b11bc4118d125ea03a511e9e4828fb}\index{FEngineLoop@{FEngineLoop}!LoadCoreModules@{LoadCoreModules}}
+\index{LoadCoreModules@{LoadCoreModules}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{LoadCoreModules()}{LoadCoreModules()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a70b11bc4118d125ea03a511e9e4828fb} 
+bool FEngine\+Loop\+::\+Load\+Core\+Modules (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Load core modules. \Hypertarget{class_f_engine_loop_a20007056d4f805e3bea2397082230fc3}\index{FEngineLoop@{FEngineLoop}!LoadPreInitModules@{LoadPreInitModules}}
+\index{LoadPreInitModules@{LoadPreInitModules}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{LoadPreInitModules()}{LoadPreInitModules()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a20007056d4f805e3bea2397082230fc3} 
+void FEngine\+Loop\+::\+Load\+Pre\+Init\+Modules (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Load all modules needed before Init. \Hypertarget{class_f_engine_loop_ad48fae8708b97c1bd121d1ea76a1bad8}\index{FEngineLoop@{FEngineLoop}!PostInitRHI@{PostInitRHI}}
+\index{PostInitRHI@{PostInitRHI}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{PostInitRHI()}{PostInitRHI()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_ad48fae8708b97c1bd121d1ea76a1bad8} 
+static void FEngine\+Loop\+::\+Post\+Init\+RHI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+RHI post-\/init initialization \Hypertarget{class_f_engine_loop_a5a76f06523151c31745fa61930618501}\index{FEngineLoop@{FEngineLoop}!PreInit@{PreInit}}
+\index{PreInit@{PreInit}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{PreInit()}{PreInit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a5a76f06523151c31745fa61930618501} 
+int32 FEngine\+Loop\+::\+Pre\+Init (\begin{DoxyParamCaption}\item[{const TCHAR \texorpdfstring{$\ast$}{*}}]{Cmd\+Line}{}\end{DoxyParamCaption})}
+
+Pre-\/\+Initialize the main loop -\/ parse command line, sets up GIs\+Editor, etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cmd\+Line} & The command line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error level; 0 if successful, \texorpdfstring{$>$}{>} 0 if there were errors. 
+\end{DoxyReturn}
+\Hypertarget{class_f_engine_loop_a518759c53ff8b6c486dec40d4736ae9c}\index{FEngineLoop@{FEngineLoop}!PreInit@{PreInit}}
+\index{PreInit@{PreInit}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{PreInit()}{PreInit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a518759c53ff8b6c486dec40d4736ae9c} 
+int32 FEngine\+Loop\+::\+Pre\+Init (\begin{DoxyParamCaption}\item[{int32}]{ArgC}{, }\item[{TCHAR \texorpdfstring{$\ast$}{*}}]{ArgV}{\mbox{[}$\,$\mbox{]}, }\item[{const TCHAR \texorpdfstring{$\ast$}{*}}]{Additional\+Commandline}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+Pre-\/\+Initialize the main loop, and generates the commandline from standard Arg\+C/\+ArgV from main().
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArgC} & The number of strings in ArgV. \\
+\hline
+{\em ArgV} & The command line parameters (ArgV\mbox{[}0\mbox{]} is expected to be the executable name). \\
+\hline
+{\em Additional\+Command\+Line} & Optional string to append to the command line (after ArgV is put together). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the error level, 0 if successful and \texorpdfstring{$>$}{>} 0 if there were errors. 
+\end{DoxyReturn}
+\Hypertarget{class_f_engine_loop_ad60344a74fb5036521a89c8e7d71f5be}\index{FEngineLoop@{FEngineLoop}!PreInitHMDDevice@{PreInitHMDDevice}}
+\index{PreInitHMDDevice@{PreInitHMDDevice}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{PreInitHMDDevice()}{PreInitHMDDevice()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_ad60344a74fb5036521a89c8e7d71f5be} 
+static void FEngine\+Loop\+::\+Pre\+Init\+HMDDevice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Pre-\/init HMD device (if necessary). \Hypertarget{class_f_engine_loop_aebb4688844c5ecc6b09693c0a0312d83}\index{FEngineLoop@{FEngineLoop}!PreInitPostStartupScreen@{PreInitPostStartupScreen}}
+\index{PreInitPostStartupScreen@{PreInitPostStartupScreen}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{PreInitPostStartupScreen()}{PreInitPostStartupScreen()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_aebb4688844c5ecc6b09693c0a0312d83} 
+int32 FEngine\+Loop\+::\+Pre\+Init\+Post\+Startup\+Screen (\begin{DoxyParamCaption}\item[{const TCHAR \texorpdfstring{$\ast$}{*}}]{Cmd\+Line}{}\end{DoxyParamCaption})}
+
+Second part of Pre\+Init. \Hypertarget{class_f_engine_loop_a6ee54366854f9d9f85fa4c57ec56c7a4}\index{FEngineLoop@{FEngineLoop}!PreInitPreStartupScreen@{PreInitPreStartupScreen}}
+\index{PreInitPreStartupScreen@{PreInitPreStartupScreen}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{PreInitPreStartupScreen()}{PreInitPreStartupScreen()}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_a6ee54366854f9d9f85fa4c57ec56c7a4} 
+int32 FEngine\+Loop\+::\+Pre\+Init\+Pre\+Startup\+Screen (\begin{DoxyParamCaption}\item[{const TCHAR \texorpdfstring{$\ast$}{*}}]{Cmd\+Line}{}\end{DoxyParamCaption})}
+
+First part of Pre\+Init. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_f_engine_loop_ab30256ba5e81e4976a7c0a0942745a0d}\index{FEngineLoop@{FEngineLoop}!FrameTimes@{FrameTimes}}
+\index{FrameTimes@{FrameTimes}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{FrameTimes}{FrameTimes}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_ab30256ba5e81e4976a7c0a0942745a0d} 
+TArray$<$float$>$ FEngine\+Loop\+::\+Frame\+Times\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds a dynamically expanding array of frame times in milliseconds (if FApp\+::\+Is\+Benchmarking() is set). 
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00158}{158}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+\Hypertarget{class_f_engine_loop_ad30ae3ed817713d35265e52fc16c3720}\index{FEngineLoop@{FEngineLoop}!LastFrameCycles@{LastFrameCycles}}
+\index{LastFrameCycles@{LastFrameCycles}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{LastFrameCycles}{LastFrameCycles}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_ad30ae3ed817713d35265e52fc16c3720} 
+uint32 FEngine\+Loop\+::\+Last\+Frame\+Cycles\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the number of cycles in the last frame. 
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00170}{170}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+\Hypertarget{class_f_engine_loop_aa84b807df1e7aa38880a34ba88d75df0}\index{FEngineLoop@{FEngineLoop}!MaxFrameCounter@{MaxFrameCounter}}
+\index{MaxFrameCounter@{MaxFrameCounter}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{MaxFrameCounter}{MaxFrameCounter}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_aa84b807df1e7aa38880a34ba88d75df0} 
+uint64 FEngine\+Loop\+::\+Max\+Frame\+Counter\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the maximum number of frames to render in benchmarking mode. 
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00167}{167}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+\Hypertarget{class_f_engine_loop_af6caa55af89a07b9d2e970a01ac3e6b9}\index{FEngineLoop@{FEngineLoop}!MaxTickTime@{MaxTickTime}}
+\index{MaxTickTime@{MaxTickTime}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{MaxTickTime}{MaxTickTime}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_af6caa55af89a07b9d2e970a01ac3e6b9} 
+double FEngine\+Loop\+::\+Max\+Tick\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the maximum number of seconds engine should be ticked. 
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00164}{164}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+\Hypertarget{class_f_engine_loop_ab908b3d689e69e40d8db363782f5d2fb}\index{FEngineLoop@{FEngineLoop}!TotalTickTime@{TotalTickTime}}
+\index{TotalTickTime@{TotalTickTime}!FEngineLoop@{FEngineLoop}}
+\doxysubsubsection{\texorpdfstring{TotalTickTime}{TotalTickTime}}
+{\footnotesize\ttfamily \label{class_f_engine_loop_ab908b3d689e69e40d8db363782f5d2fb} 
+double FEngine\+Loop\+::\+Total\+Tick\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the total time spent ticking engine. 
+
+Definition at line \mbox{\hyperlink{_launch_engine_loop_8h_source_l00161}{161}} of file \mbox{\hyperlink{_launch_engine_loop_8h_source}{Launch\+Engine\+Loop.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Play\+Tag\+Game/\+Source/\+Play\+Tag\+Game/\+Tests/Launch\+Engine\+Loop.\+h\end{DoxyCompactItemize}
