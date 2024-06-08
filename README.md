@@ -85,11 +85,6 @@ This project is about making UE5 character using c++.
 
 
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
