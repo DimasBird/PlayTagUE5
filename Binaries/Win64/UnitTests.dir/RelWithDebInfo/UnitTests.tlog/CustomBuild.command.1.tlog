@@ -1,0 +1,10 @@
+^D:\PROGRAM FILES (X86)\UE5_DOCS\PLAYTAGGAME\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Program Files (x86)/ue5_docs/PlayTagGame" "-BD:/Program Files (x86)/ue5_docs/PlayTagGame/Binaries/Win64" --check-stamp-file "D:/Program Files (x86)/ue5_docs/PlayTagGame/Binaries/Win64/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
