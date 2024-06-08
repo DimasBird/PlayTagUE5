@@ -78,7 +78,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-//// Здесь текст о проекте
+This project is about making UE5 character using c++.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,15 +93,18 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-/// Здесь подготавливаю читателя к установке
+Before opening IDE it is better to set project for work.
 
 ### Prerequisites
 
-/// Здесь я пишу о необходимых ресурсах
+* Unreal Engine 5.0+
+* IDE (better option is Visual Studio with integration of Unreal Engine) 
 
 ### Installation
 
-/// Описываю шаги установки
+1) First of all you have to install Unreal Engine from the official store: <a href="https://store.epicgames.com">https://store.epicgames.com</a>.
+2) You should install Unreal Engine 5.0+. The lower versions do not gurantee the workability.
+3) You should make Unreal Engine integration in your IDE (it is possible in Visual Studio by installing "Game development on c++" in Visual Studio Installer).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +113,8 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-/// Описываю шаги использования
+- It is good to use in educational purpose.
+- It is good to use to make a first-person game (the character is Minecraft stylized)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
