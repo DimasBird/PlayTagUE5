@@ -114,7 +114,8 @@ Before opening IDE it is better to set project for work.
 ## Usage
 
 - It is good to use in educational purpose.
-- It is good to use to make a first-person game (the character is Minecraft stylized)
+- It is good to use to make a first-person game (the character is Minecraft stylized).
+- It is good to practice the skills of programming and upgrading the character.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +128,10 @@ Before opening IDE it is better to set project for work.
 <!-- CONTACT -->
 ## Contact
 
-/// Здесь укажу свои контакты
+- dimasbirdrus@gmail.com
+- dimasbirdrus@yandex.ru
+- dagutnikov@edu.hse.ru
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,6 +140,7 @@ Before opening IDE it is better to set project for work.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-/// Здесь укажу необходимые ресурсы для понимания
+It is good to use Unreal Engine documentation to understand the basics:
+* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
