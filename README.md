@@ -116,10 +116,6 @@ Before opening IDE it is better to set project for work.
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
