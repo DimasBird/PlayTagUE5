@@ -130,8 +130,11 @@ Before opening IDE it is better to set project for work.
 ## Acknowledgments
 
 It is good to use Unreal Engine documentation to understand the basics:
-* UE5 documentation source: https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-0-documentation?application_version=5.0
-* UE5 c++ documentation source: https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-1-documentation?application_version=5.1
-* Epic Games source: https://store.epicgames.com/
+* UE5 documentation source:
+    https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-0-documentation?application_version=5.0
+* UE5 c++ documentation source:
+    https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-1-documentation?application_version=5.1
+* Epic Games source:
+    https://store.epicgames.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
