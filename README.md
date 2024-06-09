@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a>
-    <img src="Media/Mike Matrix.jpg" alt="Logo" width="960" height="540">
+    <img src="Media/Mike Matrix.jpg" alt="Logo" width="800" height="450">
   </a>
 
   <h3 align="center">PlayTag Unreal Engine 5 project</h3>
