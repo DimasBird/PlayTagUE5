@@ -34,7 +34,7 @@
   <p align="center">
     The UE5 character C++ project.
     <br />
-    <a><strong>[Explore the docs »]("docs/html/index.html")</strong></a>
+    <a href=""/docs/html/index.html""><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/DimasBird/PlayTagUE5">View Demo</a>
