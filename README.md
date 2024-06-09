@@ -29,7 +29,7 @@
     <img src="Media/Mike Matrix.jpg" alt="Logo" width="800" height="450">
   </a>
 
-  <h3 align="center">PlayTag Unreal Engine 5 project</h3>
+  <h3 align="center">Unreal Engine 5 Character Project</h3>
 
   <p align="center">
     The UE5 character C++ project.
