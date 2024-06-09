@@ -97,7 +97,7 @@ Before opening IDE it is better to set project for work.
 1) First of all you have to install Unreal Engine from the official store: <a href="https://store.epicgames.com">https://store.epicgames.com</a>.
 2) You should install Unreal Engine 5.0+. The lower versions do not gurantee the workability.
 3) You should make Unreal Engine integration in your IDE (it is possible in Visual Studio by installing "Game development on c++" in Visual Studio Installer).
-4) Do this if you do not use Visual Studio. If it gets hard to use Visual Studio, you can use UnrealBuildTool.exe to generate CMake files in UE x.x directory: ".../UE_x.x/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe". (to generate the files use the terminal: "your/UnrealBuildTool/location" -CMakefile -game -project "location/of/your/*.uproject/file").
+4) Do this if you are not using Visual Studio. If it gets hard to use Visual Studio, you can use UnrealBuildTool.exe to generate CMake files in UE x.x directory: ".../UE_x.x/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe". (to generate the files use the terminal: "your/UnrealBuildTool/location" -CMakefile -game -project "location/of/your/*.uproject/file").
 5) Drag Plugins/UE4CMake to the UE folder "UE_x.x/Engine/Plugins".
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
