@@ -89,7 +89,7 @@ Before opening IDE it is better to set project for work.
 
 ### Prerequisites
 
-* Unreal Engine 5.0+
+* Unreal Engine 5.0+ (use UnrealBuildTool to make CMake files)
 * IDE (better option is Visual Studio with integration of Unreal Engine) 
 
 ### Installation
@@ -97,6 +97,7 @@ Before opening IDE it is better to set project for work.
 1) First of all you have to install Unreal Engine from the official store: <a href="https://store.epicgames.com">https://store.epicgames.com</a>.
 2) You should install Unreal Engine 5.0+. The lower versions do not gurantee the workability.
 3) You should make Unreal Engine integration in your IDE (it is possible in Visual Studio by installing "Game development on c++" in Visual Studio Installer).
+4) If it gets hard to use Visual Studio, you can use UnrealBuildTool.exe to generate CMake files in UE x.x directory: ".../UE_x.x/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe". (to generate the files use the terminal: "your/UnrealBuildTool/location" -CMakefile -game -project "location/of/your/*.uproject/file")
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,6 +130,8 @@ Before opening IDE it is better to set project for work.
 ## Acknowledgments
 
 It is good to use Unreal Engine documentation to understand the basics:
-* 
+* UE5 documentation source: https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-0-documentation?application_version=5.0
+* UE5 c++ documentation source: https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-1-documentation?application_version=5.1
+* Epic Games source: https://store.epicgames.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
