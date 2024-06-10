@@ -126,22 +126,32 @@ My character has got some functionality.
 - Variable replication
 
 ### Some screenshots
+<div align="center">
 <a>
   <img src="Media/screenshot1.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  *Screenshot 1. The character in Editor.*
+  Screenshot 1. The character in Editor.
+
+  
 </a>
 <a>
   <img src="Media/screenshot2.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  *Screenshot 2. The map footage.*
+  Screenshot 2. The map footage.
+
+  
 </a>
 <a>
   <img src="Media/screenshot3.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  *Screenshot 3. Opened door.*
+  Screenshot 3. Opened door.
+
+  
 </a>
 <a>
   <img src="Media/screenshot4.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  *Screenshot 4. How it looks in editable mode.*
+  Screenshot 4. How it looks in editable mode.
+
+  
 </a>
+</div>
 
 <!-- CONTACT -->
 ## Contact
