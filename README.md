@@ -113,7 +113,45 @@ Before opening IDE it is better to set project for work.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Functionality
+My character has got some functionality.
 
+### What is included
+- Walking
+- Crouching
+- Running
+- Using Flashlight
+- Interacting with the door
+- Camera change
+- Variable replication
+
+### Some screenshots
+<div align="center">
+<a>
+  <img src="Media/screenshot1.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  <p>Screenshot 1. The character in Editor.</p>
+
+  
+</a>
+<a>
+  <img src="Media/screenshot2.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  <p>Screenshot 2. The map footage.</p>
+
+  
+</a>
+<a>
+  <img src="Media/screenshot3.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  <p>Screenshot 3. Opened door.</p>
+
+  
+</a>
+<a>
+  <img src="Media/screenshot4.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  <p>Screenshot 4. How it looks in editable mode.</p>
+
+  
+</a>
+</div>
 
 <!-- CONTACT -->
 ## Contact
@@ -131,11 +169,12 @@ Before opening IDE it is better to set project for work.
 ## Acknowledgments
 
 It is good to use Unreal Engine documentation to understand the basics:
-* UE5 documentation source:
-    https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-0-documentation?application_version=5.0
-* UE5 c++ documentation source:
-    https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-1-documentation?application_version=5.1
-* Epic Games source:
-    https://store.epicgames.com/
+* UE5 documentation source: <a href="https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-0-documentation?application_version=5.0">software documentation</a>
+* UE5 c++ documentation source: <a href="https://dev.epicgames.com/documentation/ru-ru/unreal-engine/unreal-engine-5-1-documentation?application_version=5.1">c++ documentation</a>
+* Epic Games source: <a href="https://store.epicgames.com/">store</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Licence
+This UE5 class is free to use.
+Source of the best README.md template: <a href="https://github.com/othneildrew/Best-README-Template">here</a>
