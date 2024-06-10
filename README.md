@@ -113,7 +113,35 @@ Before opening IDE it is better to set project for work.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Functionality
+My character has got some functionality.
 
+### What is included
+- Walking
+- Crouching
+- Running
+- Using Flashlight
+- Interacting with the door
+- Camera change
+- Variable replication
+
+### Some screenshots
+<a>
+  <img src="Media/screenshot1.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  *Screenshot 1. The character in Editor.*
+</a>
+<a>
+  <img src="Media/screenshot2.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  *Screenshot 2. The map footage.*
+</a>
+<a>
+  <img src="Media/screenshot3.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  *Screenshot 3. Opened door.*
+</a>
+<a>
+  <img src="Media/screenshot4.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
+  *Screenshot 4. How it looks in editable mode.*
+</a>
 
 <!-- CONTACT -->
 ## Contact
@@ -138,4 +166,5 @@ It is good to use Unreal Engine documentation to understand the basics:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Licence
+This UE5 class is free to use.
 Source of the best README.md template: <a href="https://github.com/othneildrew/Best-README-Template">here</a>
