@@ -129,25 +129,25 @@ My character has got some functionality.
 <div align="center">
 <a>
   <img src="Media/screenshot1.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  Screenshot 1. The character in Editor.
+  <p>Screenshot 1. The character in Editor.</p>
 
   
 </a>
 <a>
   <img src="Media/screenshot2.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  Screenshot 2. The map footage.
+  <p>Screenshot 2. The map footage.</p>
 
   
 </a>
 <a>
   <img src="Media/screenshot3.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  Screenshot 3. Opened door.
+  <p>Screenshot 3. Opened door.</p>
 
   
 </a>
 <a>
   <img src="Media/screenshot4.png" alt="Responsive Image" style="max-width: 80%; height: auto;">
-  Screenshot 4. How it looks in editable mode.
+  <p>Screenshot 4. How it looks in editable mode.</p>
 
   
 </a>
