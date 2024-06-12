@@ -122,7 +122,7 @@ My character has got some functionality.
 - Running
 - Using Flashlight
 - Interacting with the door
-- Camera change
+- Camera switch
 - Variable replication
 
 ### Some screenshots
