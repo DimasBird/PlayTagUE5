@@ -207,7 +207,25 @@ $(function(){initNavTree('_night_guard_8h_source.html',''); initResizable(true);
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">void</span> GetLifetimeReplicatedProps(TArray&lt;FLifetimeProperty&gt;&amp; OutLifetimeProps) const override;</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordtype">void</span> Update_Movement_Speed();</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>};</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordtype">void</span> Server_SetIsRun_Implementation(<span class="keywordtype">bool</span> bNewIsRun);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordtype">bool</span> Server_SetIsRun_Validate(<span class="keywordtype">bool</span> bNewIsRun);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keywordtype">void</span> Client_SetIsRun_Implementation(<span class="keywordtype">bool</span> bNewIsRun);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordtype">void</span> Server_SetIsTired_Implementation(<span class="keywordtype">bool</span> bNewIsTired);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordtype">bool</span> Server_SetIsTired_Validate(<span class="keywordtype">bool</span> bNewIsTired);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keywordtype">void</span> Client_SetIsTired_Implementation(<span class="keywordtype">bool</span> bNewIsTired);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keywordtype">void</span> Server_SetCurrentStamina_Implementation(<span class="keywordtype">float</span> fNewCurrentStamina);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keywordtype">bool</span> Server_SetCurrentStamina_Validate(<span class="keywordtype">float</span> fNewCurrentStamina);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordtype">void</span> Client_SetCurrentStamina_Implementation(<span class="keywordtype">float</span> fNewCurrentStamina);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>};</div>
 </div>
 <div class="ttc" id="aclass_a_my_character_html"><div class="ttname"><a href="class_a_my_character.html">AMyCharacter</a></div><div class="ttdoc">The parent class of characters.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00014">MyCharacter.h:15</a></div></div>
 <div class="ttc" id="aclass_a_night_guard_html"><div class="ttname"><a href="class_a_night_guard.html">ANightGuard</a></div><div class="ttdoc">ANightGuard class.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">NightGuard.h:26</a></div></div>

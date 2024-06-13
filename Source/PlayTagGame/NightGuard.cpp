@@ -267,6 +267,7 @@ void ANightGuard::Update_Movement_Speed()
 
 //===============================================================================
 //		IS_RUN REPLICATION
+
 void ANightGuard::Server_SetIsRun_Implementation(bool bNewIsRun)
 {
 	IsRun = bNewIsRun;
@@ -287,6 +288,7 @@ void ANightGuard::Client_SetIsRun_Implementation(bool bNewIsRun)
 
 //===============================================================================
 //		IS_TIRED REPLICATION
+
 void ANightGuard::Server_SetIsTired_Implementation(bool bNewIsTired)
 {
 	IsTired = bNewIsTired;
@@ -307,6 +309,7 @@ void ANightGuard::Client_SetIsTired_Implementation(bool bNewIsTired)
 
 //===============================================================================
 //		CURRENT_STAMINA REPLICATION
+
 void ANightGuard::Server_SetCurrentStamina_Implementation(float fNewCurrentStamina)
 {
 	CurrentStamina = fNewCurrentStamina;

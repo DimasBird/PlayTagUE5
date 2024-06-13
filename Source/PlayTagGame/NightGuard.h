@@ -274,4 +274,97 @@ public:
 	* This method updates speed of a character.
 	*/
 	void Update_Movement_Speed();
+
+	/** \brief Server SetIsRun Implementation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is the server implementation method to make a character run on the server. It is defined by the programmer.
+	* \param[in] bNewIsRun The new state of the IsRun variable.
+	*/
+	void Server_SetIsRun_Implementation(bool bNewIsRun);
+
+	/** \brief Server SetIsRun Validation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is a server validation method to make a character run on a server. It is defined by the programmer.
+	* \param[in] bNewIsRun The new state of the IsRun variable.
+	* \param[out] true
+	*/
+	bool Server_SetIsRun_Validate(bool bNewIsRun);
+
+	/** \brief Client SetIsRun Implementation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is a client implementation method to make a character run on a client. It is defined by the programmer.
+	* \param[in] bNewIsRun The new state of the IsRun variable.
+	*/
+	void Client_SetIsRun_Implementation(bool bNewIsRun);
+
+	/** \brief Server SetIsTired Implementation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is the server implementation method to make a character be tired on the server. It is defined by the programmer.
+	* \param[in] bNewIsTired The new state of the IsTired variable.
+	*/
+	void Server_SetIsTired_Implementation(bool bNewIsTired);
+
+	/** \brief Server SetIsTired Validation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is the server validation method to make a character be tired on the server. It is defined by the programmer.
+	* \param[in] bNewIsTired The new state of the IsTired variable.
+	* \param[out] true
+	*/
+	bool Server_SetIsTired_Validate(bool bNewIsTired);
+
+	/** \brief Server SetIsTired Implementation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is a client implementation method to make a character be tired on a client. It is defined by the programmer.
+	* \param[in] bNewIsTired The new state of the IsTired variable.
+	*/
+	void Client_SetIsTired_Implementation(bool bNewIsTired);
+
+	/** \brief Server SetCurrentStamina Implementation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is the server method to set CurrentStamina on the server. It is defined by the programmer.
+	* \param[in] fNewCurrentStamina The new state of the CurrentStamina variable.
+	*/
+	void Server_SetCurrentStamina_Implementation(float fNewCurrentStamina);
+
+	/** \brief Server SetIsTired Validation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is the server validation method to make a character be tired on the server. It is defined by the programmer.
+	* \param[in] bNewIsTired The new state of the IsTired variable.
+	* \param[out] true
+	*/
+	bool Server_SetCurrentStamina_Validate(float fNewCurrentStamina);
+
+	/** \brief Server SetCurrentStamina Implementation.
+	* \author DimasBirdrus
+	* \version 1.0
+	* \date May, 2024
+	*
+	* This is a client method to set CurrentStamina on a client. It is defined by the programmer.
+	* \param[in] fNewCurrentStamina The new state of the CurrentStamina variable.
+	*/
+	void Client_SetCurrentStamina_Implementation(float fNewCurrentStamina);
 };
