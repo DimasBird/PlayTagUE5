@@ -29,7 +29,7 @@ ANightGuard::ANightGuard()
     SpringArm1->bUsePawnControlRotation = true;
     SpringArm2->bUsePawnControlRotation = true;
     Camera3rd_1->bUsePawnControlRotation = false;
-    Camera3rd_1->bUsePawnControlRotation = false;
+    Camera3rd_2->bUsePawnControlRotation = false;
     Camera1st->bUsePawnControlRotation = true;
 
     bUseControllerRotationPitch = false;
