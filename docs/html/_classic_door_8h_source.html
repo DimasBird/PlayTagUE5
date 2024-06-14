@@ -104,58 +104,56 @@ $(function(){initNavTree('_classic_door_8h_source.html',''); initResizable(true)
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;MyCharacter.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;GameFramework/Actor.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Components/TimelineComponent.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Components/BoxComponent.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Components/AudioComponent.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Components/BoxComponent.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Components/TimelineComponent.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;GameFramework/Actor.h&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;GameFramework/Character.h&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Components/AudioComponent.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;MyCharacter.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;ClassicDoor.generated.h&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>UCLASS()</div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_a_classic_door.html">   19</a></span>class PLAYTAGGAME_API <a class="code hl_class" href="class_a_classic_door.html">AClassicDoor</a> : public AActor</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    GENERATED_BODY()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_a_classic_door.html">AClassicDoor</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    UPROPERTY(VisibleAnywhere, Category = <span class="stringliteral">&quot;Sound&quot;</span>)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UAudioComponent* Sound1;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UPROPERTY(VisibleAnywhere, Category = <span class="stringliteral">&quot;Sound&quot;</span>)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    UAudioComponent* Sound2;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UPROPERTY(VisibleAnywhere)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        UStaticMeshComponent* Door;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UPROPERTY(VisibleAnywhere, Category = <span class="stringliteral">&quot;Box&quot;</span>)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        UBoxComponent* BoxComponent;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> IsClosed = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    UPROPERTY(BlueprintReadOnly)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">float</span> degree = 90;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    UPROPERTY(BlueprintReadWrite, Category = <span class="stringliteral">&quot;Reversed&quot;</span>)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">bool</span> inversed = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    UPROPERTY(EditAnywhere, Category=<span class="stringliteral">&quot;MaxDoorOpenDegree&quot;</span>)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">float</span> MaxDegree = 110;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    UPROPERTY(EditAnywhere)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        UCurveFloat* Curve;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        FTimeline Timeline;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_class" href="class_a_my_character.html">AMyCharacter</a>* Actor = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">bool</span> thatSide;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    UFUNCTION()</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> Interaction();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> DoorOpen(<span class="keywordtype">float</span> value);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> SetOnSameSide();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Tick(<span class="keywordtype">float</span> Time) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_a_classic_door.html">   19</a></span>class PLAYTAGGAME_API <a class="code hl_class" href="class_a_classic_door.html">AClassicDoor</a> : public AActor {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="class_a_classic_door.html">AClassicDoor</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    UPROPERTY(VisibleAnywhere, Category = <span class="stringliteral">&quot;Sound&quot;</span>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    UAudioComponent* Sound1;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UPROPERTY(VisibleAnywhere, Category = <span class="stringliteral">&quot;Sound&quot;</span>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UAudioComponent* Sound2;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    UPROPERTY(VisibleAnywhere)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UStaticMeshComponent* Door;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    UPROPERTY(VisibleAnywhere, Category = <span class="stringliteral">&quot;Box&quot;</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UBoxComponent* BoxComponent;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">bool</span> IsClosed = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    UPROPERTY(BlueprintReadOnly)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">float</span> degree = 90;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    UPROPERTY(BlueprintReadWrite, Category = <span class="stringliteral">&quot;Reversed&quot;</span>)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> inversed = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;MaxDoorOpenDegree&quot;</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">float</span> MaxDegree = 110;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    UPROPERTY(EditAnywhere)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    UCurveFloat* Curve;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    FTimeline Timeline;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="class_a_my_character.html">AMyCharacter</a>* Actor = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span> thatSide;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    UFUNCTION()</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> Interaction();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> DoorOpen(<span class="keywordtype">float</span> value);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> SetOnSameSide();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Tick(<span class="keywordtype">float</span> Time) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 </div>
-<div class="ttc" id="aclass_a_classic_door_html"><div class="ttname"><a href="class_a_classic_door.html">AClassicDoor</a></div><div class="ttdoc">The Door class.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ClassicDoor.h:20</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html"><div class="ttname"><a href="class_a_my_character.html">AMyCharacter</a></div><div class="ttdoc">The parent class of characters.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00014">MyCharacter.h:15</a></div></div>
+<div class="ttc" id="aclass_a_classic_door_html"><div class="ttname"><a href="class_a_classic_door.html">AClassicDoor</a></div><div class="ttdoc">The Door class.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ClassicDoor.h:19</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html"><div class="ttname"><a href="class_a_my_character.html">AMyCharacter</a></div><div class="ttdoc">The parent class of characters.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00014">MyCharacter.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
