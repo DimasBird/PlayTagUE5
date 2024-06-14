@@ -102,106 +102,102 @@ $(function(){initNavTree('_my_character_8cpp_source.html',''); initResizable(tru
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;MyCharacter.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Sets default values</span></div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_a_my_character.html#acf50f0ca5a617c44a2af5fc709d5ae43">    8</a></span><a class="code hl_function" href="class_a_my_character.html#acf50f0ca5a617c44a2af5fc709d5ae43">AMyCharacter::AMyCharacter</a>() {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don&#39;t need it.</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    PrimaryActorTick.bCanEverTick = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_variable" href="class_a_my_character.html#ac2ff917033a63d45fd19e2dbe81056bc">Posture</a> = 1;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_variable" href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">FlashlightOn</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;MyCharacter.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Sets default values</span></div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_a_my_character.html#acf50f0ca5a617c44a2af5fc709d5ae43">    6</a></span><a class="code hl_function" href="class_a_my_character.html#acf50f0ca5a617c44a2af5fc709d5ae43">AMyCharacter::AMyCharacter</a>()</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don&#39;t need it.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    PrimaryActorTick.bCanEverTick = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_variable" href="class_a_my_character.html#ac2ff917033a63d45fd19e2dbe81056bc">Posture</a> = 1;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_variable" href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">FlashlightOn</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_a_my_character.html#aca5cb3baf5ef2265ff411388137878dc">   14</a></span><span class="keyword">const</span> <span class="keywordtype">float</span>&amp; <a class="code hl_function" href="class_a_my_character.html#aca5cb3baf5ef2265ff411388137878dc">AMyCharacter::GetStamina</a>()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_my_character.html#a3a91a74c612be52d0320c7ad71cf0943">CurrentStamina</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_a_my_character.html#aca5cb3baf5ef2265ff411388137878dc">   17</a></span><span class="keyword">const</span> <span class="keywordtype">float</span>&amp; <a class="code hl_function" href="class_a_my_character.html#aca5cb3baf5ef2265ff411388137878dc">AMyCharacter::GetStamina</a>()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_my_character.html#a3a91a74c612be52d0320c7ad71cf0943">CurrentStamina</a>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a89ef1692f74b49306767edf4180cae43">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a89ef1692f74b49306767edf4180cae43">AMyCharacter::ChangeCamera</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a89ef1692f74b49306767edf4180cae43">   22</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a89ef1692f74b49306767edf4180cae43">AMyCharacter::ChangeCamera</a>()</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_a_my_character.html#afa4d4cdc45c33537fe1ebb640ddf10ea">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#afa4d4cdc45c33537fe1ebb640ddf10ea">AMyCharacter::CrouchFunc</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_a_my_character.html#afa4d4cdc45c33537fe1ebb640ddf10ea">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#afa4d4cdc45c33537fe1ebb640ddf10ea">AMyCharacter::CrouchFunc</a>()</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a2eb5ec204357aa495f29387e070d4910">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a2eb5ec204357aa495f29387e070d4910">AMyCharacter::ChangeFlashlight</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">FlashlightOn</a> = not <a class="code hl_variable" href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">FlashlightOn</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a2eb5ec204357aa495f29387e070d4910">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a2eb5ec204357aa495f29387e070d4910">AMyCharacter::ChangeFlashlight</a>()</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">FlashlightOn</a> = not <a class="code hl_variable" href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">FlashlightOn</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a1c160b696cd67c562d883dd1292a1456">   32</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a1c160b696cd67c562d883dd1292a1456">AMyCharacter::Run</a>()</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a1c160b696cd67c562d883dd1292a1456">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a1c160b696cd67c562d883dd1292a1456">AMyCharacter::Run</a>()</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a36ae65757862991acb5325b6315e50ba">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a36ae65757862991acb5325b6315e50ba">AMyCharacter::StopRun</a>()</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
 </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a36ae65757862991acb5325b6315e50ba">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a36ae65757862991acb5325b6315e50ba">AMyCharacter::StopRun</a>()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_a_my_character.html#ab7db134078c2c8328fb345bf4c24b29a">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#ab7db134078c2c8328fb345bf4c24b29a">AMyCharacter::StopRunSelf</a>()</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_a_my_character.html#ab7db134078c2c8328fb345bf4c24b29a">   44</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#ab7db134078c2c8328fb345bf4c24b29a">AMyCharacter::StopRunSelf</a>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a9d7b44418b624e5e89be749018321a25">   44</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a9d7b44418b624e5e89be749018321a25">AMyCharacter::DecreaseStamina</a>()</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a9d7b44418b624e5e89be749018321a25">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a9d7b44418b624e5e89be749018321a25">AMyCharacter::DecreaseStamina</a>()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a702a3e5120210a6494fccd5f628cc86a">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a702a3e5120210a6494fccd5f628cc86a">AMyCharacter::IncreaseStamina</a>()</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
 </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a702a3e5120210a6494fccd5f628cc86a">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a702a3e5120210a6494fccd5f628cc86a">AMyCharacter::IncreaseStamina</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a8c3292552cae1ab3e46b9b5c45d5f638">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a8c3292552cae1ab3e46b9b5c45d5f638">AMyCharacter::Interact</a>()</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_a_my_character.html#a8c3292552cae1ab3e46b9b5c45d5f638">   56</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#a8c3292552cae1ab3e46b9b5c45d5f638">AMyCharacter::Interact</a>()</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_a_my_character.html#afb05292eec90e55888fedbab337930f7">   56</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#afb05292eec90e55888fedbab337930f7">AMyCharacter::GetLifetimeReplicatedProps</a>(TArray&lt;FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_a_my_character.html#afb05292eec90e55888fedbab337930f7">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_character.html#afb05292eec90e55888fedbab337930f7">AMyCharacter::GetLifetimeReplicatedProps</a>(TArray&lt;FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
-</div>
-<div class="ttc" id="aclass_a_my_character_html_a183731e025191e2d73c19a5df6fc978c"><div class="ttname"><a href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">AMyCharacter::FlashlightOn</a></div><div class="ttdeci">bool FlashlightOn</div><div class="ttdoc">The value, which is used to set current flashlight's state.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00029">MyCharacter.h:29</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a1c160b696cd67c562d883dd1292a1456"><div class="ttname"><a href="class_a_my_character.html#a1c160b696cd67c562d883dd1292a1456">AMyCharacter::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdoc">Run method for a character.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">MyCharacter.cpp:36</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a2eb5ec204357aa495f29387e070d4910"><div class="ttname"><a href="class_a_my_character.html#a2eb5ec204357aa495f29387e070d4910">AMyCharacter::ChangeFlashlight</a></div><div class="ttdeci">virtual void ChangeFlashlight()</div><div class="ttdoc">Changes the density of the flashlight's light.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">MyCharacter.cpp:30</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a36ae65757862991acb5325b6315e50ba"><div class="ttname"><a href="class_a_my_character.html#a36ae65757862991acb5325b6315e50ba">AMyCharacter::StopRun</a></div><div class="ttdeci">virtual void StopRun()</div><div class="ttdoc">Game-controllable Stop-Run method.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">MyCharacter.cpp:40</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a3a91a74c612be52d0320c7ad71cf0943"><div class="ttname"><a href="class_a_my_character.html#a3a91a74c612be52d0320c7ad71cf0943">AMyCharacter::CurrentStamina</a></div><div class="ttdeci">float CurrentStamina</div><div class="ttdoc">Character's current stamina.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00048">MyCharacter.h:48</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a702a3e5120210a6494fccd5f628cc86a"><div class="ttname"><a href="class_a_my_character.html#a702a3e5120210a6494fccd5f628cc86a">AMyCharacter::IncreaseStamina</a></div><div class="ttdeci">virtual void IncreaseStamina()</div><div class="ttdoc">The Increase Stamina method.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">MyCharacter.cpp:52</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a89ef1692f74b49306767edf4180cae43"><div class="ttname"><a href="class_a_my_character.html#a89ef1692f74b49306767edf4180cae43">AMyCharacter::ChangeCamera</a></div><div class="ttdeci">virtual void ChangeCamera()</div><div class="ttdoc">Changes current camera.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">MyCharacter.cpp:22</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a8c3292552cae1ab3e46b9b5c45d5f638"><div class="ttname"><a href="class_a_my_character.html#a8c3292552cae1ab3e46b9b5c45d5f638">AMyCharacter::Interact</a></div><div class="ttdeci">virtual void Interact()</div><div class="ttdoc">The method of Interaction.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">MyCharacter.cpp:56</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_a9d7b44418b624e5e89be749018321a25"><div class="ttname"><a href="class_a_my_character.html#a9d7b44418b624e5e89be749018321a25">AMyCharacter::DecreaseStamina</a></div><div class="ttdeci">virtual void DecreaseStamina()</div><div class="ttdoc">The Decrease Stamina method.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">MyCharacter.cpp:48</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_ab7db134078c2c8328fb345bf4c24b29a"><div class="ttname"><a href="class_a_my_character.html#ab7db134078c2c8328fb345bf4c24b29a">AMyCharacter::StopRunSelf</a></div><div class="ttdeci">virtual void StopRunSelf()</div><div class="ttdoc">Player-controllable Stop-Run method.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">MyCharacter.cpp:44</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_ac2ff917033a63d45fd19e2dbe81056bc"><div class="ttname"><a href="class_a_my_character.html#ac2ff917033a63d45fd19e2dbe81056bc">AMyCharacter::Posture</a></div><div class="ttdeci">int Posture</div><div class="ttdoc">The value, which is used to set current posture.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00036">MyCharacter.h:36</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_aca5cb3baf5ef2265ff411388137878dc"><div class="ttname"><a href="class_a_my_character.html#aca5cb3baf5ef2265ff411388137878dc">AMyCharacter::GetStamina</a></div><div class="ttdeci">const float &amp; GetStamina()</div><div class="ttdoc">Getter for CurrentStamina.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">MyCharacter.cpp:17</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_acf50f0ca5a617c44a2af5fc709d5ae43"><div class="ttname"><a href="class_a_my_character.html#acf50f0ca5a617c44a2af5fc709d5ae43">AMyCharacter::AMyCharacter</a></div><div class="ttdeci">AMyCharacter()</div><div class="ttdoc">Constructor for a character.</div><div class="ttdef"><b>Definition</b> <a href="#l00008">MyCharacter.cpp:8</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_afa4d4cdc45c33537fe1ebb640ddf10ea"><div class="ttname"><a href="class_a_my_character.html#afa4d4cdc45c33537fe1ebb640ddf10ea">AMyCharacter::CrouchFunc</a></div><div class="ttdeci">virtual void CrouchFunc()</div><div class="ttdoc">Crouch method for a character.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">MyCharacter.cpp:26</a></div></div>
-<div class="ttc" id="aclass_a_my_character_html_afb05292eec90e55888fedbab337930f7"><div class="ttname"><a href="class_a_my_character.html#afb05292eec90e55888fedbab337930f7">AMyCharacter::GetLifetimeReplicatedProps</a></div><div class="ttdeci">void GetLifetimeReplicatedProps(TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const</div><div class="ttdoc">The replication method.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">MyCharacter.cpp:60</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a183731e025191e2d73c19a5df6fc978c"><div class="ttname"><a href="class_a_my_character.html#a183731e025191e2d73c19a5df6fc978c">AMyCharacter::FlashlightOn</a></div><div class="ttdeci">bool FlashlightOn</div><div class="ttdoc">The value, which is used to set current flashlight's state.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00027">MyCharacter.h:27</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a1c160b696cd67c562d883dd1292a1456"><div class="ttname"><a href="class_a_my_character.html#a1c160b696cd67c562d883dd1292a1456">AMyCharacter::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdoc">Run method for a character.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">MyCharacter.cpp:32</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a2eb5ec204357aa495f29387e070d4910"><div class="ttname"><a href="class_a_my_character.html#a2eb5ec204357aa495f29387e070d4910">AMyCharacter::ChangeFlashlight</a></div><div class="ttdeci">virtual void ChangeFlashlight()</div><div class="ttdoc">Changes the density of the flashlight's light.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">MyCharacter.cpp:27</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a36ae65757862991acb5325b6315e50ba"><div class="ttname"><a href="class_a_my_character.html#a36ae65757862991acb5325b6315e50ba">AMyCharacter::StopRun</a></div><div class="ttdeci">virtual void StopRun()</div><div class="ttdoc">Game-controllable Stop-Run method.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">MyCharacter.cpp:36</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a3a91a74c612be52d0320c7ad71cf0943"><div class="ttname"><a href="class_a_my_character.html#a3a91a74c612be52d0320c7ad71cf0943">AMyCharacter::CurrentStamina</a></div><div class="ttdeci">float CurrentStamina</div><div class="ttdoc">Character's current stamina.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00046">MyCharacter.h:46</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a702a3e5120210a6494fccd5f628cc86a"><div class="ttname"><a href="class_a_my_character.html#a702a3e5120210a6494fccd5f628cc86a">AMyCharacter::IncreaseStamina</a></div><div class="ttdeci">virtual void IncreaseStamina()</div><div class="ttdoc">The Increase Stamina method.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">MyCharacter.cpp:48</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a89ef1692f74b49306767edf4180cae43"><div class="ttname"><a href="class_a_my_character.html#a89ef1692f74b49306767edf4180cae43">AMyCharacter::ChangeCamera</a></div><div class="ttdeci">virtual void ChangeCamera()</div><div class="ttdoc">Changes current camera.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">MyCharacter.cpp:19</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a8c3292552cae1ab3e46b9b5c45d5f638"><div class="ttname"><a href="class_a_my_character.html#a8c3292552cae1ab3e46b9b5c45d5f638">AMyCharacter::Interact</a></div><div class="ttdeci">virtual void Interact()</div><div class="ttdoc">The method of Interaction.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">MyCharacter.cpp:52</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_a9d7b44418b624e5e89be749018321a25"><div class="ttname"><a href="class_a_my_character.html#a9d7b44418b624e5e89be749018321a25">AMyCharacter::DecreaseStamina</a></div><div class="ttdeci">virtual void DecreaseStamina()</div><div class="ttdoc">The Decrease Stamina method.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">MyCharacter.cpp:44</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_ab7db134078c2c8328fb345bf4c24b29a"><div class="ttname"><a href="class_a_my_character.html#ab7db134078c2c8328fb345bf4c24b29a">AMyCharacter::StopRunSelf</a></div><div class="ttdeci">virtual void StopRunSelf()</div><div class="ttdoc">Player-controllable Stop-Run method.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">MyCharacter.cpp:40</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_ac2ff917033a63d45fd19e2dbe81056bc"><div class="ttname"><a href="class_a_my_character.html#ac2ff917033a63d45fd19e2dbe81056bc">AMyCharacter::Posture</a></div><div class="ttdeci">int Posture</div><div class="ttdoc">The value, which is used to set current posture.</div><div class="ttdef"><b>Definition</b> <a href="_my_character_8h_source.html#l00034">MyCharacter.h:34</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_aca5cb3baf5ef2265ff411388137878dc"><div class="ttname"><a href="class_a_my_character.html#aca5cb3baf5ef2265ff411388137878dc">AMyCharacter::GetStamina</a></div><div class="ttdeci">const float &amp; GetStamina()</div><div class="ttdoc">Getter for CurrentStamina.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">MyCharacter.cpp:14</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_acf50f0ca5a617c44a2af5fc709d5ae43"><div class="ttname"><a href="class_a_my_character.html#acf50f0ca5a617c44a2af5fc709d5ae43">AMyCharacter::AMyCharacter</a></div><div class="ttdeci">AMyCharacter()</div><div class="ttdoc">Constructor for a character.</div><div class="ttdef"><b>Definition</b> <a href="#l00006">MyCharacter.cpp:6</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_afa4d4cdc45c33537fe1ebb640ddf10ea"><div class="ttname"><a href="class_a_my_character.html#afa4d4cdc45c33537fe1ebb640ddf10ea">AMyCharacter::CrouchFunc</a></div><div class="ttdeci">virtual void CrouchFunc()</div><div class="ttdoc">Crouch method for a character.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">MyCharacter.cpp:23</a></div></div>
+<div class="ttc" id="aclass_a_my_character_html_afb05292eec90e55888fedbab337930f7"><div class="ttname"><a href="class_a_my_character.html#afb05292eec90e55888fedbab337930f7">AMyCharacter::GetLifetimeReplicatedProps</a></div><div class="ttdeci">void GetLifetimeReplicatedProps(TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const</div><div class="ttdoc">The replication method.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">MyCharacter.cpp:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
